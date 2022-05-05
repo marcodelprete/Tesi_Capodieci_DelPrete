@@ -1,0 +1,1825 @@
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\cctHWGBB.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"cymetadata.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.global	cy_metadata
+  20              		.global	cy_meta_flashprotect
+  21              		.global	cy_meta_wonvl
+  22              		.global	cy_meta_custnvl
+  23              		.global	cy_meta_configecc
+  24              		.section	.cyconfigecc,"a",%progbits
+  25              		.align	2
+  26              		.type	cy_meta_configecc, %object
+  27              		.size	cy_meta_configecc, 1248
+  28              	cy_meta_configecc:
+  29 0000 01       		.byte	1
+  30 0001 5A       		.byte	90
+  31 0002 00       		.byte	0
+  32 0003 40       		.byte	64
+  33 0004 01       		.byte	1
+  34 0005 64       		.byte	100
+  35 0006 00       		.byte	0
+  36 0007 40       		.byte	64
+  37 0008 03       		.byte	3
+  38 0009 65       		.byte	101
+  39 000a 00       		.byte	0
+  40 000b 40       		.byte	64
+  41 000c 5D       		.byte	93
+  42 000d 08       		.byte	8
+  43 000e 01       		.byte	1
+  44 000f 40       		.byte	64
+  45 0010 33       		.byte	51
+  46 0011 09       		.byte	9
+  47 0012 01       		.byte	1
+  48 0013 40       		.byte	64
+  49 0014 41       		.byte	65
+  50 0015 14       		.byte	20
+  51 0016 01       		.byte	1
+  52 0017 40       		.byte	64
+  53 0018 23       		.byte	35
+  54 0019 15       		.byte	21
+  55 001a 01       		.byte	1
+  56 001b 40       		.byte	64
+  57 001c 01       		.byte	1
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\cctHWGBB.s 			page 2
+
+
+  58 001d 17       		.byte	23
+  59 001e 01       		.byte	1
+  60 001f 40       		.byte	64
+  61 0020 06       		.byte	6
+  62 0021 18       		.byte	24
+  63 0022 01       		.byte	1
+  64 0023 40       		.byte	64
+  65 0024 37       		.byte	55
+  66 0025 19       		.byte	25
+  67 0026 01       		.byte	1
+  68 0027 40       		.byte	64
+  69 0028 31       		.byte	49
+  70 0029 1A       		.byte	26
+  71 002a 01       		.byte	1
+  72 002b 40       		.byte	64
+  73 002c 38       		.byte	56
+  74 002d 1B       		.byte	27
+  75 002e 01       		.byte	1
+  76 002f 40       		.byte	64
+  77 0030 06       		.byte	6
+  78 0031 40       		.byte	64
+  79 0032 01       		.byte	1
+  80 0033 40       		.byte	64
+  81 0034 03       		.byte	3
+  82 0035 41       		.byte	65
+  83 0036 01       		.byte	1
+  84 0037 40       		.byte	64
+  85 0038 03       		.byte	3
+  86 0039 42       		.byte	66
+  87 003a 01       		.byte	1
+  88 003b 40       		.byte	64
+  89 003c 03       		.byte	3
+  90 003d 43       		.byte	67
+  91 003e 01       		.byte	1
+  92 003f 40       		.byte	64
+  93 0040 02       		.byte	2
+  94 0041 44       		.byte	68
+  95 0042 01       		.byte	1
+  96 0043 40       		.byte	64
+  97 0044 01       		.byte	1
+  98 0045 45       		.byte	69
+  99 0046 01       		.byte	1
+ 100 0047 40       		.byte	64
+ 101 0048 03       		.byte	3
+ 102 0049 46       		.byte	70
+ 103 004a 01       		.byte	1
+ 104 004b 40       		.byte	64
+ 105 004c 05       		.byte	5
+ 106 004d 47       		.byte	71
+ 107 004e 01       		.byte	1
+ 108 004f 40       		.byte	64
+ 109 0050 07       		.byte	7
+ 110 0051 48       		.byte	72
+ 111 0052 01       		.byte	1
+ 112 0053 40       		.byte	64
+ 113 0054 09       		.byte	9
+ 114 0055 49       		.byte	73
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\cctHWGBB.s 			page 3
+
+
+ 115 0056 01       		.byte	1
+ 116 0057 40       		.byte	64
+ 117 0058 02       		.byte	2
+ 118 0059 4C       		.byte	76
+ 119 005a 01       		.byte	1
+ 120 005b 40       		.byte	64
+ 121 005c 0C       		.byte	12
+ 122 005d 4D       		.byte	77
+ 123 005e 01       		.byte	1
+ 124 005f 40       		.byte	64
+ 125 0060 05       		.byte	5
+ 126 0061 50       		.byte	80
+ 127 0062 01       		.byte	1
+ 128 0063 40       		.byte	64
+ 129 0064 02       		.byte	2
+ 130 0065 51       		.byte	81
+ 131 0066 01       		.byte	1
+ 132 0067 40       		.byte	64
+ 133 0068 9F       		.byte	-97
+ 134 0069 01       		.byte	1
+ 135 006a 88       		.byte	-120
+ 136 006b 0F       		.byte	15
+ 137 006c 85       		.byte	-123
+ 138 006d 0D       		.byte	13
+ 139 006e 88       		.byte	-120
+ 140 006f 38       		.byte	56
+ 141 0070 8B       		.byte	-117
+ 142 0071 72       		.byte	114
+ 143 0072 04       		.byte	4
+ 144 0073 13       		.byte	19
+ 145 0074 05       		.byte	5
+ 146 0075 01       		.byte	1
+ 147 0076 06       		.byte	6
+ 148 0077 0C       		.byte	12
+ 149 0078 0E       		.byte	14
+ 150 0079 20       		.byte	32
+ 151 007a 10       		.byte	16
+ 152 007b 03       		.byte	3
+ 153 007c 12       		.byte	18
+ 154 007d 14       		.byte	20
+ 155 007e 13       		.byte	19
+ 156 007f 01       		.byte	1
+ 157 0080 15       		.byte	21
+ 158 0081 01       		.byte	1
+ 159 0082 1E       		.byte	30
+ 160 0083 08       		.byte	8
+ 161 0084 20       		.byte	32
+ 162 0085 0A       		.byte	10
+ 163 0086 22       		.byte	34
+ 164 0087 14       		.byte	20
+ 165 0088 25       		.byte	37
+ 166 0089 02       		.byte	2
+ 167 008a 26       		.byte	38
+ 168 008b 15       		.byte	21
+ 169 008c 28       		.byte	40
+ 170 008d 13       		.byte	19
+ 171 008e 2A       		.byte	42
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\cctHWGBB.s 			page 4
+
+
+ 172 008f 04       		.byte	4
+ 173 0090 30       		.byte	48
+ 174 0091 10       		.byte	16
+ 175 0092 34       		.byte	52
+ 176 0093 0F       		.byte	15
+ 177 0094 36       		.byte	54
+ 178 0095 20       		.byte	32
+ 179 0096 37       		.byte	55
+ 180 0097 03       		.byte	3
+ 181 0098 39       		.byte	57
+ 182 0099 88       		.byte	-120
+ 183 009a 3A       		.byte	58
+ 184 009b 20       		.byte	32
+ 185 009c 3E       		.byte	62
+ 186 009d 01       		.byte	1
+ 187 009e 3F       		.byte	63
+ 188 009f 04       		.byte	4
+ 189 00a0 40       		.byte	64
+ 190 00a1 23       		.byte	35
+ 191 00a2 41       		.byte	65
+ 192 00a3 06       		.byte	6
+ 193 00a4 46       		.byte	70
+ 194 00a5 0C       		.byte	12
+ 195 00a6 47       		.byte	71
+ 196 00a7 EB       		.byte	-21
+ 197 00a8 48       		.byte	72
+ 198 00a9 34       		.byte	52
+ 199 00aa 49       		.byte	73
+ 200 00ab FF       		.byte	-1
+ 201 00ac 4A       		.byte	74
+ 202 00ad FF       		.byte	-1
+ 203 00ae 4B       		.byte	75
+ 204 00af FF       		.byte	-1
+ 205 00b0 4E       		.byte	78
+ 206 00b1 F0       		.byte	-16
+ 207 00b2 4F       		.byte	79
+ 208 00b3 44       		.byte	68
+ 209 00b4 50       		.byte	80
+ 210 00b5 0C       		.byte	12
+ 211 00b6 54       		.byte	84
+ 212 00b7 01       		.byte	1
+ 213 00b8 58       		.byte	88
+ 214 00b9 04       		.byte	4
+ 215 00ba 59       		.byte	89
+ 216 00bb 04       		.byte	4
+ 217 00bc 5A       		.byte	90
+ 218 00bd 04       		.byte	4
+ 219 00be 5B       		.byte	91
+ 220 00bf 04       		.byte	4
+ 221 00c0 5C       		.byte	92
+ 222 00c1 22       		.byte	34
+ 223 00c2 5D       		.byte	93
+ 224 00c3 22       		.byte	34
+ 225 00c4 5F       		.byte	95
+ 226 00c5 01       		.byte	1
+ 227 00c6 66       		.byte	102
+ 228 00c7 C0       		.byte	-64
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\cctHWGBB.s 			page 5
+
+
+ 229 00c8 6A       		.byte	106
+ 230 00c9 40       		.byte	64
+ 231 00ca 6B       		.byte	107
+ 232 00cb 02       		.byte	2
+ 233 00cc 80       		.byte	-128
+ 234 00cd 5C       		.byte	92
+ 235 00ce 82       		.byte	-126
+ 236 00cf 02       		.byte	2
+ 237 00d0 84       		.byte	-124
+ 238 00d1 70       		.byte	112
+ 239 00d2 85       		.byte	-123
+ 240 00d3 01       		.byte	1
+ 241 00d4 86       		.byte	-122
+ 242 00d5 0C       		.byte	12
+ 243 00d6 87       		.byte	-121
+ 244 00d7 16       		.byte	22
+ 245 00d8 8A       		.byte	-118
+ 246 00d9 03       		.byte	3
+ 247 00da 8C       		.byte	-116
+ 248 00db 10       		.byte	16
+ 249 00dc 94       		.byte	-108
+ 250 00dd 14       		.byte	20
+ 251 00de 95       		.byte	-107
+ 252 00df 01       		.byte	1
+ 253 00e0 97       		.byte	-105
+ 254 00e1 0E       		.byte	14
+ 255 00e2 9B       		.byte	-101
+ 256 00e3 03       		.byte	3
+ 257 00e4 9F       		.byte	-97
+ 258 00e5 1C       		.byte	28
+ 259 00e6 A0       		.byte	-96
+ 260 00e7 09       		.byte	9
+ 261 00e8 A1       		.byte	-95
+ 262 00e9 1C       		.byte	28
+ 263 00ea A2       		.byte	-94
+ 264 00eb 10       		.byte	16
+ 265 00ec A3       		.byte	-93
+ 266 00ed 03       		.byte	3
+ 267 00ee A6       		.byte	-90
+ 268 00ef 20       		.byte	32
+ 269 00f0 A8       		.byte	-88
+ 270 00f1 6C       		.byte	108
+ 271 00f2 AA       		.byte	-86
+ 272 00f3 11       		.byte	17
+ 273 00f4 AF       		.byte	-81
+ 274 00f5 08       		.byte	8
+ 275 00f6 B2       		.byte	-78
+ 276 00f7 1F       		.byte	31
+ 277 00f8 B3       		.byte	-77
+ 278 00f9 1A       		.byte	26
+ 279 00fa B6       		.byte	-74
+ 280 00fb 60       		.byte	96
+ 281 00fc B7       		.byte	-73
+ 282 00fd 0F       		.byte	15
+ 283 00fe B8       		.byte	-72
+ 284 00ff 80       		.byte	-128
+ 285 0100 BB       		.byte	-69
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\cctHWGBB.s 			page 6
+
+
+ 286 0101 88       		.byte	-120
+ 287 0102 BE       		.byte	-66
+ 288 0103 40       		.byte	64
+ 289 0104 C0       		.byte	-64
+ 290 0105 01       		.byte	1
+ 291 0106 C5       		.byte	-59
+ 292 0107 40       		.byte	64
+ 293 0108 C9       		.byte	-55
+ 294 0109 FF       		.byte	-1
+ 295 010a CA       		.byte	-54
+ 296 010b 07       		.byte	7
+ 297 010c CB       		.byte	-53
+ 298 010d FF       		.byte	-1
+ 299 010e CC       		.byte	-52
+ 300 010f 40       		.byte	64
+ 301 0110 CD       		.byte	-51
+ 302 0111 20       		.byte	32
+ 303 0112 CE       		.byte	-50
+ 304 0113 F0       		.byte	-16
+ 305 0114 CF       		.byte	-49
+ 306 0115 05       		.byte	5
+ 307 0116 D0       		.byte	-48
+ 308 0117 08       		.byte	8
+ 309 0118 D8       		.byte	-40
+ 310 0119 04       		.byte	4
+ 311 011a D9       		.byte	-39
+ 312 011b 04       		.byte	4
+ 313 011c DA       		.byte	-38
+ 314 011d 04       		.byte	4
+ 315 011e DC       		.byte	-36
+ 316 011f 22       		.byte	34
+ 317 0120 DD       		.byte	-35
+ 318 0121 02       		.byte	2
+ 319 0122 DF       		.byte	-33
+ 320 0123 01       		.byte	1
+ 321 0124 E0       		.byte	-32
+ 322 0125 40       		.byte	64
+ 323 0126 E1       		.byte	-31
+ 324 0127 A8       		.byte	-88
+ 325 0128 E2       		.byte	-30
+ 326 0129 40       		.byte	64
+ 327 012a E3       		.byte	-29
+ 328 012b 20       		.byte	32
+ 329 012c 00       		.byte	0
+ 330 012d 96       		.byte	-106
+ 331 012e 03       		.byte	3
+ 332 012f 12       		.byte	18
+ 333 0130 04       		.byte	4
+ 334 0131 04       		.byte	4
+ 335 0132 05       		.byte	5
+ 336 0133 80       		.byte	-128
+ 337 0134 09       		.byte	9
+ 338 0135 04       		.byte	4
+ 339 0136 0C       		.byte	12
+ 340 0137 80       		.byte	-128
+ 341 0138 0F       		.byte	15
+ 342 0139 80       		.byte	-128
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\cctHWGBB.s 			page 7
+
+
+ 343 013a 10       		.byte	16
+ 344 013b A0       		.byte	-96
+ 345 013c 12       		.byte	18
+ 346 013d 88       		.byte	-120
+ 347 013e 13       		.byte	19
+ 348 013f 08       		.byte	8
+ 349 0140 17       		.byte	23
+ 350 0141 2A       		.byte	42
+ 351 0142 18       		.byte	24
+ 352 0143 11       		.byte	17
+ 353 0144 19       		.byte	25
+ 354 0145 08       		.byte	8
+ 355 0146 1C       		.byte	28
+ 356 0147 04       		.byte	4
+ 357 0148 1E       		.byte	30
+ 358 0149 41       		.byte	65
+ 359 014a 20       		.byte	32
+ 360 014b 02       		.byte	2
+ 361 014c 22       		.byte	34
+ 362 014d 08       		.byte	8
+ 363 014e 23       		.byte	35
+ 364 014f 22       		.byte	34
+ 365 0150 25       		.byte	37
+ 366 0151 08       		.byte	8
+ 367 0152 26       		.byte	38
+ 368 0153 80       		.byte	-128
+ 369 0154 29       		.byte	41
+ 370 0155 01       		.byte	1
+ 371 0156 2B       		.byte	43
+ 372 0157 02       		.byte	2
+ 373 0158 2C       		.byte	44
+ 374 0159 20       		.byte	32
+ 375 015a 30       		.byte	48
+ 376 015b 20       		.byte	32
+ 377 015c 32       		.byte	50
+ 378 015d 88       		.byte	-120
+ 379 015e 35       		.byte	53
+ 380 015f 01       		.byte	1
+ 381 0160 36       		.byte	54
+ 382 0161 08       		.byte	8
+ 383 0162 37       		.byte	55
+ 384 0163 02       		.byte	2
+ 385 0164 38       		.byte	56
+ 386 0165 04       		.byte	4
+ 387 0166 3C       		.byte	60
+ 388 0167 04       		.byte	4
+ 389 0168 40       		.byte	64
+ 390 0169 01       		.byte	1
+ 391 016a 47       		.byte	71
+ 392 016b 18       		.byte	24
+ 393 016c 48       		.byte	72
+ 394 016d 60       		.byte	96
+ 395 016e 4E       		.byte	78
+ 396 016f 08       		.byte	8
+ 397 0170 55       		.byte	85
+ 398 0171 04       		.byte	4
+ 399 0172 56       		.byte	86
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\cctHWGBB.s 			page 8
+
+
+ 400 0173 41       		.byte	65
+ 401 0174 57       		.byte	87
+ 402 0175 40       		.byte	64
+ 403 0176 5C       		.byte	92
+ 404 0177 02       		.byte	2
+ 405 0178 5E       		.byte	94
+ 406 0179 48       		.byte	72
+ 407 017a 5F       		.byte	95
+ 408 017b 10       		.byte	16
+ 409 017c 81       		.byte	-127
+ 410 017d 08       		.byte	8
+ 411 017e C0       		.byte	-64
+ 412 017f AF       		.byte	-81
+ 413 0180 C2       		.byte	-62
+ 414 0181 94       		.byte	-108
+ 415 0182 C4       		.byte	-60
+ 416 0183 7E       		.byte	126
+ 417 0184 CA       		.byte	-54
+ 418 0185 49       		.byte	73
+ 419 0186 CC       		.byte	-52
+ 420 0187 CE       		.byte	-50
+ 421 0188 CE       		.byte	-50
+ 422 0189 42       		.byte	66
+ 423 018a D0       		.byte	-48
+ 424 018b 68       		.byte	104
+ 425 018c D2       		.byte	-46
+ 426 018d 20       		.byte	32
+ 427 018e D6       		.byte	-42
+ 428 018f F0       		.byte	-16
+ 429 0190 E0       		.byte	-32
+ 430 0191 01       		.byte	1
+ 431 0192 40       		.byte	64
+ 432 0193 30       		.byte	48
+ 433 0194 41       		.byte	65
+ 434 0195 02       		.byte	2
+ 435 0196 49       		.byte	73
+ 436 0197 FF       		.byte	-1
+ 437 0198 4A       		.byte	74
+ 438 0199 FF       		.byte	-1
+ 439 019a 4B       		.byte	75
+ 440 019b FF       		.byte	-1
+ 441 019c 4D       		.byte	77
+ 442 019d A0       		.byte	-96
+ 443 019e 4F       		.byte	79
+ 444 019f 04       		.byte	4
+ 445 01a0 50       		.byte	80
+ 446 01a1 18       		.byte	24
+ 447 01a2 5A       		.byte	90
+ 448 01a3 04       		.byte	4
+ 449 01a4 5F       		.byte	95
+ 450 01a5 01       		.byte	1
+ 451 01a6 60       		.byte	96
+ 452 01a7 40       		.byte	64
+ 453 01a8 62       		.byte	98
+ 454 01a9 C0       		.byte	-64
+ 455 01aa 64       		.byte	100
+ 456 01ab 40       		.byte	64
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\cctHWGBB.s 			page 9
+
+
+ 457 01ac 65       		.byte	101
+ 458 01ad 40       		.byte	64
+ 459 01ae 66       		.byte	102
+ 460 01af C0       		.byte	-64
+ 461 01b0 68       		.byte	104
+ 462 01b1 C0       		.byte	-64
+ 463 01b2 6A       		.byte	106
+ 464 01b3 C0       		.byte	-64
+ 465 01b4 6C       		.byte	108
+ 466 01b5 C0       		.byte	-64
+ 467 01b6 6E       		.byte	110
+ 468 01b7 C0       		.byte	-64
+ 469 01b8 83       		.byte	-125
+ 470 01b9 0A       		.byte	10
+ 471 01ba 87       		.byte	-121
+ 472 01bb 05       		.byte	5
+ 473 01bc 8A       		.byte	-118
+ 474 01bd 02       		.byte	2
+ 475 01be 8B       		.byte	-117
+ 476 01bf 0C       		.byte	12
+ 477 01c0 9C       		.byte	-100
+ 478 01c1 04       		.byte	4
+ 479 01c2 A6       		.byte	-90
+ 480 01c3 02       		.byte	2
+ 481 01c4 A8       		.byte	-88
+ 482 01c5 04       		.byte	4
+ 483 01c6 AD       		.byte	-83
+ 484 01c7 03       		.byte	3
+ 485 01c8 AE       		.byte	-82
+ 486 01c9 01       		.byte	1
+ 487 01ca B0       		.byte	-80
+ 488 01cb 04       		.byte	4
+ 489 01cc B2       		.byte	-78
+ 490 01cd 01       		.byte	1
+ 491 01ce B3       		.byte	-77
+ 492 01cf 0C       		.byte	12
+ 493 01d0 B4       		.byte	-76
+ 494 01d1 02       		.byte	2
+ 495 01d2 B5       		.byte	-75
+ 496 01d3 0C       		.byte	12
+ 497 01d4 B7       		.byte	-73
+ 498 01d5 03       		.byte	3
+ 499 01d6 B8       		.byte	-72
+ 500 01d7 02       		.byte	2
+ 501 01d8 BE       		.byte	-66
+ 502 01d9 10       		.byte	16
+ 503 01da C0       		.byte	-64
+ 504 01db 30       		.byte	48
+ 505 01dc C1       		.byte	-63
+ 506 01dd 02       		.byte	2
+ 507 01de C5       		.byte	-59
+ 508 01df D0       		.byte	-48
+ 509 01e0 C6       		.byte	-58
+ 510 01e1 20       		.byte	32
+ 511 01e2 C7       		.byte	-57
+ 512 01e3 10       		.byte	16
+ 513 01e4 C8       		.byte	-56
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\cctHWGBB.s 			page 10
+
+
+ 514 01e5 3A       		.byte	58
+ 515 01e6 C9       		.byte	-55
+ 516 01e7 FF       		.byte	-1
+ 517 01e8 CA       		.byte	-54
+ 518 01e9 FF       		.byte	-1
+ 519 01ea CB       		.byte	-53
+ 520 01eb FF       		.byte	-1
+ 521 01ec CD       		.byte	-51
+ 522 01ed AF       		.byte	-81
+ 523 01ee CE       		.byte	-50
+ 524 01ef 0F       		.byte	15
+ 525 01f0 CF       		.byte	-49
+ 526 01f1 04       		.byte	4
+ 527 01f2 D0       		.byte	-48
+ 528 01f3 18       		.byte	24
+ 529 01f4 D2       		.byte	-46
+ 530 01f5 80       		.byte	-128
+ 531 01f6 D4       		.byte	-44
+ 532 01f7 05       		.byte	5
+ 533 01f8 D8       		.byte	-40
+ 534 01f9 04       		.byte	4
+ 535 01fa D9       		.byte	-39
+ 536 01fb 04       		.byte	4
+ 537 01fc DA       		.byte	-38
+ 538 01fd 04       		.byte	4
+ 539 01fe DB       		.byte	-37
+ 540 01ff 04       		.byte	4
+ 541 0200 DF       		.byte	-33
+ 542 0201 01       		.byte	1
+ 543 0202 E0       		.byte	-32
+ 544 0203 40       		.byte	64
+ 545 0204 E2       		.byte	-30
+ 546 0205 C0       		.byte	-64
+ 547 0206 E4       		.byte	-28
+ 548 0207 40       		.byte	64
+ 549 0208 E5       		.byte	-27
+ 550 0209 40       		.byte	64
+ 551 020a E6       		.byte	-26
+ 552 020b C0       		.byte	-64
+ 553 020c E8       		.byte	-24
+ 554 020d C0       		.byte	-64
+ 555 020e EA       		.byte	-22
+ 556 020f C0       		.byte	-64
+ 557 0210 EC       		.byte	-20
+ 558 0211 C0       		.byte	-64
+ 559 0212 EE       		.byte	-18
+ 560 0213 C0       		.byte	-64
+ 561 0214 04       		.byte	4
+ 562 0215 10       		.byte	16
+ 563 0216 0F       		.byte	15
+ 564 0217 02       		.byte	2
+ 565 0218 16       		.byte	22
+ 566 0219 28       		.byte	40
+ 567 021a 17       		.byte	23
+ 568 021b 40       		.byte	64
+ 569 021c 1C       		.byte	28
+ 570 021d 10       		.byte	16
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\cctHWGBB.s 			page 11
+
+
+ 571 021e 1D       		.byte	29
+ 572 021f 08       		.byte	8
+ 573 0220 1E       		.byte	30
+ 574 0221 08       		.byte	8
+ 575 0222 1F       		.byte	31
+ 576 0223 02       		.byte	2
+ 577 0224 26       		.byte	38
+ 578 0225 40       		.byte	64
+ 579 0226 27       		.byte	39
+ 580 0227 28       		.byte	40
+ 581 0228 2F       		.byte	47
+ 582 0229 02       		.byte	2
+ 583 022a 3C       		.byte	60
+ 584 022b 10       		.byte	16
+ 585 022c 3E       		.byte	62
+ 586 022d 08       		.byte	8
+ 587 022e 3F       		.byte	63
+ 588 022f 02       		.byte	2
+ 589 0230 40       		.byte	64
+ 590 0231 10       		.byte	16
+ 591 0232 41       		.byte	65
+ 592 0233 20       		.byte	32
+ 593 0234 45       		.byte	69
+ 594 0235 28       		.byte	40
+ 595 0236 4F       		.byte	79
+ 596 0237 01       		.byte	1
+ 597 0238 55       		.byte	85
+ 598 0239 20       		.byte	32
+ 599 023a 56       		.byte	86
+ 600 023b 28       		.byte	40
+ 601 023c 57       		.byte	87
+ 602 023d 01       		.byte	1
+ 603 023e 5E       		.byte	94
+ 604 023f 88       		.byte	-120
+ 605 0240 5F       		.byte	95
+ 606 0241 01       		.byte	1
+ 607 0242 77       		.byte	119
+ 608 0243 40       		.byte	64
+ 609 0244 83       		.byte	-125
+ 610 0245 08       		.byte	8
+ 611 0246 87       		.byte	-121
+ 612 0247 20       		.byte	32
+ 613 0248 C0       		.byte	-64
+ 614 0249 40       		.byte	64
+ 615 024a C2       		.byte	-62
+ 616 024b 80       		.byte	-128
+ 617 024c C4       		.byte	-60
+ 618 024d E0       		.byte	-32
+ 619 024e CA       		.byte	-54
+ 620 024f 10       		.byte	16
+ 621 0250 CE       		.byte	-50
+ 622 0251 E0       		.byte	-32
+ 623 0252 D0       		.byte	-48
+ 624 0253 66       		.byte	102
+ 625 0254 D6       		.byte	-42
+ 626 0255 D0       		.byte	-48
+ 627 0256 E4       		.byte	-28
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\cctHWGBB.s 			page 12
+
+
+ 628 0257 04       		.byte	4
+ 629 0258 E8       		.byte	-24
+ 630 0259 20       		.byte	32
+ 631 025a E2       		.byte	-30
+ 632 025b 08       		.byte	8
+ 633 025c 82       		.byte	-126
+ 634 025d 01       		.byte	1
+ 635 025e A2       		.byte	-94
+ 636 025f 01       		.byte	1
+ 637 0260 B4       		.byte	-76
+ 638 0261 01       		.byte	1
+ 639 0262 BE       		.byte	-66
+ 640 0263 10       		.byte	16
+ 641 0264 D8       		.byte	-40
+ 642 0265 04       		.byte	4
+ 643 0266 DF       		.byte	-33
+ 644 0267 01       		.byte	1
+ 645 0268 00       		.byte	0
+ 646 0269 02       		.byte	2
+ 647 026a 04       		.byte	4
+ 648 026b 28       		.byte	40
+ 649 026c 06       		.byte	6
+ 650 026d 40       		.byte	64
+ 651 026e 0C       		.byte	12
+ 652 026f 40       		.byte	64
+ 653 0270 0E       		.byte	14
+ 654 0271 66       		.byte	102
+ 655 0272 10       		.byte	16
+ 656 0273 80       		.byte	-128
+ 657 0274 14       		.byte	20
+ 658 0275 02       		.byte	2
+ 659 0276 16       		.byte	22
+ 660 0277 01       		.byte	1
+ 661 0278 17       		.byte	23
+ 662 0279 05       		.byte	5
+ 663 027a 19       		.byte	25
+ 664 027b 20       		.byte	32
+ 665 027c 1C       		.byte	28
+ 666 027d 02       		.byte	2
+ 667 027e 1D       		.byte	29
+ 668 027f 0C       		.byte	12
+ 669 0280 1E       		.byte	30
+ 670 0281 08       		.byte	8
+ 671 0282 1F       		.byte	31
+ 672 0283 01       		.byte	1
+ 673 0284 24       		.byte	36
+ 674 0285 15       		.byte	21
+ 675 0286 27       		.byte	39
+ 676 0287 40       		.byte	64
+ 677 0288 2D       		.byte	45
+ 678 0289 80       		.byte	-128
+ 679 028a 2F       		.byte	47
+ 680 028b 28       		.byte	40
+ 681 028c 36       		.byte	54
+ 682 028d 10       		.byte	16
+ 683 028e 37       		.byte	55
+ 684 028f 14       		.byte	20
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\cctHWGBB.s 			page 13
+
+
+ 685 0290 3C       		.byte	60
+ 686 0291 11       		.byte	17
+ 687 0292 3D       		.byte	61
+ 688 0293 10       		.byte	16
+ 689 0294 3E       		.byte	62
+ 690 0295 44       		.byte	68
+ 691 0296 3F       		.byte	63
+ 692 0297 02       		.byte	2
+ 693 0298 44       		.byte	68
+ 694 0299 40       		.byte	64
+ 695 029a 45       		.byte	69
+ 696 029b 08       		.byte	8
+ 697 029c 47       		.byte	71
+ 698 029d 50       		.byte	80
+ 699 029e 4C       		.byte	76
+ 700 029f 80       		.byte	-128
+ 701 02a0 4E       		.byte	78
+ 702 02a1 04       		.byte	4
+ 703 02a2 56       		.byte	86
+ 704 02a3 40       		.byte	64
+ 705 02a4 5A       		.byte	90
+ 706 02a5 0C       		.byte	12
+ 707 02a6 5D       		.byte	93
+ 708 02a7 01       		.byte	1
+ 709 02a8 65       		.byte	101
+ 710 02a9 20       		.byte	32
+ 711 02aa 67       		.byte	103
+ 712 02ab 82       		.byte	-126
+ 713 02ac 87       		.byte	-121
+ 714 02ad 40       		.byte	64
+ 715 02ae 89       		.byte	-119
+ 716 02af 01       		.byte	1
+ 717 02b0 8A       		.byte	-118
+ 718 02b1 08       		.byte	8
+ 719 02b2 92       		.byte	-110
+ 720 02b3 01       		.byte	1
+ 721 02b4 99       		.byte	-103
+ 722 02b5 08       		.byte	8
+ 723 02b6 9A       		.byte	-102
+ 724 02b7 01       		.byte	1
+ 725 02b8 9C       		.byte	-100
+ 726 02b9 02       		.byte	2
+ 727 02ba 9D       		.byte	-99
+ 728 02bb 80       		.byte	-128
+ 729 02bc A6       		.byte	-90
+ 730 02bd 04       		.byte	4
+ 731 02be B2       		.byte	-78
+ 732 02bf 40       		.byte	64
+ 733 02c0 B3       		.byte	-77
+ 734 02c1 10       		.byte	16
+ 735 02c2 C0       		.byte	-64
+ 736 02c3 78       		.byte	120
+ 737 02c4 C2       		.byte	-62
+ 738 02c5 F0       		.byte	-16
+ 739 02c6 C4       		.byte	-60
+ 740 02c7 B8       		.byte	-72
+ 741 02c8 CA       		.byte	-54
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\cctHWGBB.s 			page 14
+
+
+ 742 02c9 70       		.byte	112
+ 743 02ca CC       		.byte	-52
+ 744 02cb 60       		.byte	96
+ 745 02cc CE       		.byte	-50
+ 746 02cd F0       		.byte	-16
+ 747 02ce D0       		.byte	-48
+ 748 02cf F0       		.byte	-16
+ 749 02d0 D2       		.byte	-46
+ 750 02d1 20       		.byte	32
+ 751 02d2 D6       		.byte	-42
+ 752 02d3 80       		.byte	-128
+ 753 02d4 D8       		.byte	-40
+ 754 02d5 B0       		.byte	-80
+ 755 02d6 04       		.byte	4
+ 756 02d7 01       		.byte	1
+ 757 02d8 36       		.byte	54
+ 758 02d9 01       		.byte	1
+ 759 02da 3E       		.byte	62
+ 760 02db 40       		.byte	64
+ 761 02dc 58       		.byte	88
+ 762 02dd 04       		.byte	4
+ 763 02de 5F       		.byte	95
+ 764 02df 01       		.byte	1
+ 765 02e0 80       		.byte	-128
+ 766 02e1 0F       		.byte	15
+ 767 02e2 81       		.byte	-127
+ 768 02e3 10       		.byte	16
+ 769 02e4 82       		.byte	-126
+ 770 02e5 10       		.byte	16
+ 771 02e6 84       		.byte	-124
+ 772 02e7 0C       		.byte	12
+ 773 02e8 85       		.byte	-123
+ 774 02e9 08       		.byte	8
+ 775 02ea 88       		.byte	-120
+ 776 02eb 13       		.byte	19
+ 777 02ec 89       		.byte	-119
+ 778 02ed E7       		.byte	-25
+ 779 02ee 8A       		.byte	-118
+ 780 02ef 0C       		.byte	12
+ 781 02f0 8B       		.byte	-117
+ 782 02f1 18       		.byte	24
+ 783 02f2 8C       		.byte	-116
+ 784 02f3 01       		.byte	1
+ 785 02f4 8D       		.byte	-115
+ 786 02f5 1C       		.byte	28
+ 787 02f6 8F       		.byte	-113
+ 788 02f7 E1       		.byte	-31
+ 789 02f8 91       		.byte	-111
+ 790 02f9 3C       		.byte	60
+ 791 02fa 93       		.byte	-109
+ 792 02fb C2       		.byte	-62
+ 793 02fc 96       		.byte	-106
+ 794 02fd 13       		.byte	19
+ 795 02fe 97       		.byte	-105
+ 796 02ff E3       		.byte	-29
+ 797 0300 98       		.byte	-104
+ 798 0301 1F       		.byte	31
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\cctHWGBB.s 			page 15
+
+
+ 799 0302 99       		.byte	-103
+ 800 0303 18       		.byte	24
+ 801 0304 9C       		.byte	-100
+ 802 0305 03       		.byte	3
+ 803 0306 9D       		.byte	-99
+ 804 0307 C0       		.byte	-64
+ 805 0308 A0       		.byte	-96
+ 806 0309 08       		.byte	8
+ 807 030a A3       		.byte	-93
+ 808 030b 04       		.byte	4
+ 809 030c A4       		.byte	-92
+ 810 030d 04       		.byte	4
+ 811 030e A5       		.byte	-91
+ 812 030f FF       		.byte	-1
+ 813 0310 A8       		.byte	-88
+ 814 0311 02       		.byte	2
+ 815 0312 A9       		.byte	-87
+ 816 0313 80       		.byte	-128
+ 817 0314 AC       		.byte	-84
+ 818 0315 0C       		.byte	12
+ 819 0316 AD       		.byte	-83
+ 820 0317 44       		.byte	68
+ 821 0318 AE       		.byte	-82
+ 822 0319 13       		.byte	19
+ 823 031a B0       		.byte	-80
+ 824 031b 1C       		.byte	28
+ 825 031c B1       		.byte	-79
+ 826 031d 38       		.byte	56
+ 827 031e B2       		.byte	-78
+ 828 031f 0F       		.byte	15
+ 829 0320 B3       		.byte	-77
+ 830 0321 C0       		.byte	-64
+ 831 0322 B5       		.byte	-75
+ 832 0323 1F       		.byte	31
+ 833 0324 BA       		.byte	-70
+ 834 0325 2A       		.byte	42
+ 835 0326 BB       		.byte	-69
+ 836 0327 20       		.byte	32
+ 837 0328 D6       		.byte	-42
+ 838 0329 02       		.byte	2
+ 839 032a D7       		.byte	-41
+ 840 032b 12       		.byte	18
+ 841 032c D8       		.byte	-40
+ 842 032d 04       		.byte	4
+ 843 032e D9       		.byte	-39
+ 844 032f 04       		.byte	4
+ 845 0330 DB       		.byte	-37
+ 846 0331 04       		.byte	4
+ 847 0332 DC       		.byte	-36
+ 848 0333 22       		.byte	34
+ 849 0334 DD       		.byte	-35
+ 850 0335 20       		.byte	32
+ 851 0336 DF       		.byte	-33
+ 852 0337 01       		.byte	1
+ 853 0338 01       		.byte	1
+ 854 0339 08       		.byte	8
+ 855 033a 04       		.byte	4
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\cctHWGBB.s 			page 16
+
+
+ 856 033b 10       		.byte	16
+ 857 033c 05       		.byte	5
+ 858 033d 81       		.byte	-127
+ 859 033e 07       		.byte	7
+ 860 033f 10       		.byte	16
+ 861 0340 0C       		.byte	12
+ 862 0341 40       		.byte	64
+ 863 0342 0D       		.byte	13
+ 864 0343 08       		.byte	8
+ 865 0344 0E       		.byte	14
+ 866 0345 04       		.byte	4
+ 867 0346 0F       		.byte	15
+ 868 0347 02       		.byte	2
+ 869 0348 15       		.byte	21
+ 870 0349 91       		.byte	-111
+ 871 034a 17       		.byte	23
+ 872 034b 08       		.byte	8
+ 873 034c 18       		.byte	24
+ 874 034d 02       		.byte	2
+ 875 034e 1C       		.byte	28
+ 876 034f 10       		.byte	16
+ 877 0350 1D       		.byte	29
+ 878 0351 01       		.byte	1
+ 879 0352 1E       		.byte	30
+ 880 0353 64       		.byte	100
+ 881 0354 26       		.byte	38
+ 882 0355 09       		.byte	9
+ 883 0356 27       		.byte	39
+ 884 0357 04       		.byte	4
+ 885 0358 2D       		.byte	45
+ 886 0359 90       		.byte	-112
+ 887 035a 2E       		.byte	46
+ 888 035b 05       		.byte	5
+ 889 035c 34       		.byte	52
+ 890 035d 40       		.byte	64
+ 891 035e 35       		.byte	53
+ 892 035f 04       		.byte	4
+ 893 0360 36       		.byte	54
+ 894 0361 02       		.byte	2
+ 895 0362 37       		.byte	55
+ 896 0363 10       		.byte	16
+ 897 0364 3C       		.byte	60
+ 898 0365 10       		.byte	16
+ 899 0366 3D       		.byte	61
+ 900 0367 01       		.byte	1
+ 901 0368 3E       		.byte	62
+ 902 0369 4A       		.byte	74
+ 903 036a 5C       		.byte	92
+ 904 036b 04       		.byte	4
+ 905 036c 6C       		.byte	108
+ 906 036d 14       		.byte	20
+ 907 036e 6F       		.byte	111
+ 908 036f 29       		.byte	41
+ 909 0370 76       		.byte	118
+ 910 0371 0A       		.byte	10
+ 911 0372 77       		.byte	119
+ 912 0373 18       		.byte	24
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\cctHWGBB.s 			page 17
+
+
+ 913 0374 81       		.byte	-127
+ 914 0375 40       		.byte	64
+ 915 0376 82       		.byte	-126
+ 916 0377 02       		.byte	2
+ 917 0378 83       		.byte	-125
+ 918 0379 04       		.byte	4
+ 919 037a 89       		.byte	-119
+ 920 037b 80       		.byte	-128
+ 921 037c 8C       		.byte	-116
+ 922 037d 01       		.byte	1
+ 923 037e 90       		.byte	-112
+ 924 037f 04       		.byte	4
+ 925 0380 91       		.byte	-111
+ 926 0381 10       		.byte	16
+ 927 0382 92       		.byte	-110
+ 928 0383 01       		.byte	1
+ 929 0384 94       		.byte	-108
+ 930 0385 28       		.byte	40
+ 931 0386 96       		.byte	-106
+ 932 0387 44       		.byte	68
+ 933 0388 99       		.byte	-103
+ 934 0389 0C       		.byte	12
+ 935 038a 9D       		.byte	-99
+ 936 038b 80       		.byte	-128
+ 937 038c 9F       		.byte	-97
+ 938 038d 05       		.byte	5
+ 939 038e A1       		.byte	-95
+ 940 038f 08       		.byte	8
+ 941 0390 A3       		.byte	-93
+ 942 0391 01       		.byte	1
+ 943 0392 A6       		.byte	-90
+ 944 0393 19       		.byte	25
+ 945 0394 A7       		.byte	-89
+ 946 0395 28       		.byte	40
+ 947 0396 C0       		.byte	-64
+ 948 0397 F4       		.byte	-12
+ 949 0398 C2       		.byte	-62
+ 950 0399 E0       		.byte	-32
+ 951 039a C4       		.byte	-60
+ 952 039b F0       		.byte	-16
+ 953 039c CA       		.byte	-54
+ 954 039d F0       		.byte	-16
+ 955 039e CC       		.byte	-52
+ 956 039f F0       		.byte	-16
+ 957 03a0 CE       		.byte	-50
+ 958 03a1 F0       		.byte	-16
+ 959 03a2 D6       		.byte	-42
+ 960 03a3 40       		.byte	64
+ 961 03a4 E4       		.byte	-28
+ 962 03a5 04       		.byte	4
+ 963 03a6 E8       		.byte	-24
+ 964 03a7 20       		.byte	32
+ 965 03a8 30       		.byte	48
+ 966 03a9 02       		.byte	2
+ 967 03aa 33       		.byte	51
+ 968 03ab 10       		.byte	16
+ 969 03ac 37       		.byte	55
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\cctHWGBB.s 			page 18
+
+
+ 970 03ad 80       		.byte	-128
+ 971 03ae 3F       		.byte	63
+ 972 03af 80       		.byte	-128
+ 973 03b0 CC       		.byte	-52
+ 974 03b1 70       		.byte	112
+ 975 03b2 CE       		.byte	-50
+ 976 03b3 20       		.byte	32
+ 977 03b4 9F       		.byte	-97
+ 978 03b5 90       		.byte	-112
+ 979 03b6 A4       		.byte	-92
+ 980 03b7 02       		.byte	2
+ 981 03b8 A7       		.byte	-89
+ 982 03b9 40       		.byte	64
+ 983 03ba 9F       		.byte	-97
+ 984 03bb 90       		.byte	-112
+ 985 03bc A4       		.byte	-92
+ 986 03bd 02       		.byte	2
+ 987 03be A7       		.byte	-89
+ 988 03bf 40       		.byte	64
+ 989 03c0 9F       		.byte	-97
+ 990 03c1 90       		.byte	-112
+ 991 03c2 A4       		.byte	-92
+ 992 03c3 02       		.byte	2
+ 993 03c4 A7       		.byte	-89
+ 994 03c5 40       		.byte	64
+ 995 03c6 7D       		.byte	125
+ 996 03c7 20       		.byte	32
+ 997 03c8 DE       		.byte	-34
+ 998 03c9 01       		.byte	1
+ 999 03ca A5       		.byte	-91
+ 1000 03cb 10       		.byte	16
+ 1001 03cc 44       		.byte	68
+ 1002 03cd 10       		.byte	16
+ 1003 03ce A5       		.byte	-91
+ 1004 03cf 10       		.byte	16
+ 1005 03d0 D0       		.byte	-48
+ 1006 03d1 01       		.byte	1
+ 1007 03d2 32       		.byte	50
+ 1008 03d3 10       		.byte	16
+ 1009 03d4 81       		.byte	-127
+ 1010 03d5 10       		.byte	16
+ 1011 03d6 9C       		.byte	-100
+ 1012 03d7 10       		.byte	16
+ 1013 03d8 A5       		.byte	-91
+ 1014 03d9 10       		.byte	16
+ 1015 03da CC       		.byte	-52
+ 1016 03db 08       		.byte	8
+ 1017 03dc 21       		.byte	33
+ 1018 03dd 01       		.byte	1
+ 1019 03de 84       		.byte	-124
+ 1020 03df 02       		.byte	2
+ 1021 03e0 9F       		.byte	-97
+ 1022 03e1 90       		.byte	-112
+ 1023 03e2 A4       		.byte	-92
+ 1024 03e3 02       		.byte	2
+ 1025 03e4 A7       		.byte	-89
+ 1026 03e5 40       		.byte	64
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\cctHWGBB.s 			page 19
+
+
+ 1027 03e6 C8       		.byte	-56
+ 1028 03e7 40       		.byte	64
+ 1029 03e8 E2       		.byte	-30
+ 1030 03e9 10       		.byte	16
+ 1031 03ea 1B       		.byte	27
+ 1032 03eb 60       		.byte	96
+ 1033 03ec 83       		.byte	-125
+ 1034 03ed 30       		.byte	48
+ 1035 03ee 87       		.byte	-121
+ 1036 03ef 80       		.byte	-128
+ 1037 03f0 9F       		.byte	-97
+ 1038 03f1 90       		.byte	-112
+ 1039 03f2 A7       		.byte	-89
+ 1040 03f3 40       		.byte	64
+ 1041 03f4 B1       		.byte	-79
+ 1042 03f5 01       		.byte	1
+ 1043 03f6 C6       		.byte	-58
+ 1044 03f7 40       		.byte	64
+ 1045 03f8 E2       		.byte	-30
+ 1046 03f9 60       		.byte	96
+ 1047 03fa E4       		.byte	-28
+ 1048 03fb 20       		.byte	32
+ 1049 03fc 96       		.byte	-106
+ 1050 03fd 20       		.byte	32
+ 1051 03fe 9C       		.byte	-100
+ 1052 03ff 10       		.byte	16
+ 1053 0400 11       		.byte	17
+ 1054 0401 01       		.byte	1
+ 1055 0402 7C       		.byte	124
+ 1056 0403 40       		.byte	64
+ 1057 0404 82       		.byte	-126
+ 1058 0405 10       		.byte	16
+ 1059 0406 89       		.byte	-119
+ 1060 0407 01       		.byte	1
+ 1061 0408 8C       		.byte	-116
+ 1062 0409 40       		.byte	64
+ 1063 040a 96       		.byte	-106
+ 1064 040b 20       		.byte	32
+ 1065 040c B0       		.byte	-80
+ 1066 040d 10       		.byte	16
+ 1067 040e C4       		.byte	-60
+ 1068 040f 08       		.byte	8
+ 1069 0410 DE       		.byte	-34
+ 1070 0411 04       		.byte	4
+ 1071 0412 E0       		.byte	-32
+ 1072 0413 02       		.byte	2
+ 1073 0414 E6       		.byte	-26
+ 1074 0415 01       		.byte	1
+ 1075 0416 E8       		.byte	-24
+ 1076 0417 04       		.byte	4
+ 1077 0418 00       		.byte	0
+ 1078 0419 04       		.byte	4
+ 1079 041a 0C       		.byte	12
+ 1080 041b 04       		.byte	4
+ 1081 041c 10       		.byte	16
+ 1082 041d 05       		.byte	5
+ 1083 041e 1A       		.byte	26
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\cctHWGBB.s 			page 20
+
+
+ 1084 041f 01       		.byte	1
+ 1085 0420 1C       		.byte	28
+ 1086 0421 04       		.byte	4
+ 1087 0422 00       		.byte	0
+ 1088 0423 3A       		.byte	58
+ 1089 0424 10       		.byte	16
+ 1090 0425 02       		.byte	2
+ 1091 0426 00       		.byte	0
+ 1092 0427 00       		.byte	0
+ 1093 0428 80       		.byte	-128
+ 1094 0429 80       		.byte	-128
+ 1095 042a 00       		.byte	0
+ 1096 042b 00       		.byte	0
+ 1097 042c 40       		.byte	64
+ 1098 042d 00       		.byte	0
+ 1099 042e 00       		.byte	0
+ 1100 042f 00       		.byte	0
+ 1101 0430 00       		.byte	0
+ 1102 0431 10       		.byte	16
+ 1103 0432 02       		.byte	2
+ 1104 0433 64       		.byte	100
+ 1105 0434 04       		.byte	4
+ 1106 0435 80       		.byte	-128
+ 1107 0436 00       		.byte	0
+ 1108 0437 00       		.byte	0
+ 1109 0438 04       		.byte	4
+ 1110 0439 42       		.byte	66
+ 1111 043a 00       		.byte	0
+ 1112 043b 19       		.byte	25
+ 1113 043c 00       		.byte	0
+ 1114 043d 80       		.byte	-128
+ 1115 043e 00       		.byte	0
+ 1116 043f 00       		.byte	0
+ 1117 0440 00       		.byte	0
+ 1118 0441 00       		.byte	0
+ 1119 0442 01       		.byte	1
+ 1120 0443 00       		.byte	0
+ 1121 0444 01       		.byte	1
+ 1122 0445 80       		.byte	-128
+ 1123 0446 00       		.byte	0
+ 1124 0447 00       		.byte	0
+ 1125 0448 01       		.byte	1
+ 1126 0449 80       		.byte	-128
+ 1127 044a 00       		.byte	0
+ 1128 044b 00       		.byte	0
+ 1129 044c 00       		.byte	0
+ 1130 044d 00       		.byte	0
+ 1131 044e 02       		.byte	2
+ 1132 044f 00       		.byte	0
+ 1133 0450 04       		.byte	4
+ 1134 0451 00       		.byte	0
+ 1135 0452 00       		.byte	0
+ 1136 0453 00       		.byte	0
+ 1137 0454 00       		.byte	0
+ 1138 0455 73       		.byte	115
+ 1139 0456 01       		.byte	1
+ 1140 0457 00       		.byte	0
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\cctHWGBB.s 			page 21
+
+
+ 1141 0458 00       		.byte	0
+ 1142 0459 73       		.byte	115
+ 1143 045a 00       		.byte	0
+ 1144 045b 00       		.byte	0
+ 1145 045c 08       		.byte	8
+ 1146 045d 21       		.byte	33
+ 1147 045e 00       		.byte	0
+ 1148 045f 1A       		.byte	26
+ 1149 0460 02       		.byte	2
+ 1150 0461 0C       		.byte	12
+ 1151 0462 04       		.byte	4
+ 1152 0463 03       		.byte	3
+ 1153 0464 08       		.byte	8
+ 1154 0465 80       		.byte	-128
+ 1155 0466 01       		.byte	1
+ 1156 0467 70       		.byte	112
+ 1157 0468 80       		.byte	-128
+ 1158 0469 00       		.byte	0
+ 1159 046a 00       		.byte	0
+ 1160 046b 00       		.byte	0
+ 1161 046c 00       		.byte	0
+ 1162 046d 00       		.byte	0
+ 1163 046e 11       		.byte	17
+ 1164 046f 11       		.byte	17
+ 1165 0470 23       		.byte	35
+ 1166 0471 06       		.byte	6
+ 1167 0472 04       		.byte	4
+ 1168 0473 00       		.byte	0
+ 1169 0474 01       		.byte	1
+ 1170 0475 E0       		.byte	-32
+ 1171 0476 0C       		.byte	12
+ 1172 0477 00       		.byte	0
+ 1173 0478 06       		.byte	6
+ 1174 0479 FF       		.byte	-1
+ 1175 047a FF       		.byte	-1
+ 1176 047b FF       		.byte	-1
+ 1177 047c 62       		.byte	98
+ 1178 047d A0       		.byte	-96
+ 1179 047e F0       		.byte	-16
+ 1180 047f 41       		.byte	65
+ 1181 0480 0C       		.byte	12
+ 1182 0481 00       		.byte	0
+ 1183 0482 00       		.byte	0
+ 1184 0483 00       		.byte	0
+ 1185 0484 18       		.byte	24
+ 1186 0485 00       		.byte	0
+ 1187 0486 04       		.byte	4
+ 1188 0487 00       		.byte	0
+ 1189 0488 04       		.byte	4
+ 1190 0489 04       		.byte	4
+ 1191 048a 04       		.byte	4
+ 1192 048b 04       		.byte	4
+ 1193 048c 22       		.byte	34
+ 1194 048d 22       		.byte	34
+ 1195 048e 00       		.byte	0
+ 1196 048f 01       		.byte	1
+ 1197 0490 00       		.byte	0
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\cctHWGBB.s 			page 22
+
+
+ 1198 0491 00       		.byte	0
+ 1199 0492 00       		.byte	0
+ 1200 0493 00       		.byte	0
+ 1201 0494 00       		.byte	0
+ 1202 0495 00       		.byte	0
+ 1203 0496 40       		.byte	64
+ 1204 0497 02       		.byte	2
+ 1205 0498 00       		.byte	0
+ 1206 0499 10       		.byte	16
+ 1207 049a 30       		.byte	48
+ 1208 049b 10       		.byte	16
+ 1209 049c 00       		.byte	0
+ 1210 049d 10       		.byte	16
+ 1211 049e 10       		.byte	16
+ 1212 049f 12       		.byte	18
+ 1213 04a0 00       		.byte	0
+ 1214 04a1 00       		.byte	0
+ 1215 04a2 00       		.byte	0
+ 1216 04a3 00       		.byte	0
+ 1217 04a4 00       		.byte	0
+ 1218 04a5 00       		.byte	0
+ 1219 04a6 00       		.byte	0
+ 1220 04a7 00       		.byte	0
+ 1221 04a8 00       		.byte	0
+ 1222 04a9 00       		.byte	0
+ 1223 04aa 00       		.byte	0
+ 1224 04ab 00       		.byte	0
+ 1225 04ac 00       		.byte	0
+ 1226 04ad 00       		.byte	0
+ 1227 04ae 00       		.byte	0
+ 1228 04af 00       		.byte	0
+ 1229 04b0 00       		.byte	0
+ 1230 04b1 00       		.byte	0
+ 1231 04b2 00       		.byte	0
+ 1232 04b3 00       		.byte	0
+ 1233 04b4 00       		.byte	0
+ 1234 04b5 00       		.byte	0
+ 1235 04b6 01       		.byte	1
+ 1236 04b7 00       		.byte	0
+ 1237 04b8 80       		.byte	-128
+ 1238 04b9 00       		.byte	0
+ 1239 04ba 40       		.byte	64
+ 1240 04bb 80       		.byte	-128
+ 1241 04bc 80       		.byte	-128
+ 1242 04bd 00       		.byte	0
+ 1243 04be 80       		.byte	-128
+ 1244 04bf 00       		.byte	0
+ 1245 04c0 00       		.byte	0
+ 1246 04c1 00       		.byte	0
+ 1247 04c2 00       		.byte	0
+ 1248 04c3 00       		.byte	0
+ 1249 04c4 00       		.byte	0
+ 1250 04c5 0B       		.byte	11
+ 1251 04c6 0B       		.byte	11
+ 1252 04c7 00       		.byte	0
+ 1253 04c8 00       		.byte	0
+ 1254 04c9 00       		.byte	0
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\cctHWGBB.s 			page 23
+
+
+ 1255 04ca 00       		.byte	0
+ 1256 04cb 00       		.byte	0
+ 1257 04cc 00       		.byte	0
+ 1258 04cd 02       		.byte	2
+ 1259 04ce 02       		.byte	2
+ 1260 04cf 00       		.byte	0
+ 1261 04d0 00       		.byte	0
+ 1262 04d1 00       		.byte	0
+ 1263 04d2 00       		.byte	0
+ 1264 04d3 00       		.byte	0
+ 1265 04d4 00       		.byte	0
+ 1266 04d5 00       		.byte	0
+ 1267 04d6 00       		.byte	0
+ 1268 04d7 00       		.byte	0
+ 1269 04d8 00       		.byte	0
+ 1270 04d9 00       		.byte	0
+ 1271 04da 52       		.byte	82
+ 1272 04db 00       		.byte	0
+ 1273 04dc BB       		.byte	-69
+ 1274 04dd 00       		.byte	0
+ 1275 04de 18       		.byte	24
+ 1276 04df 01       		.byte	1
+ 1277              		.section	.cywolatch,"a",%progbits
+ 1278              		.align	2
+ 1279              		.type	cy_meta_wonvl, %object
+ 1280              		.size	cy_meta_wonvl, 4
+ 1281              	cy_meta_wonvl:
+ 1282 0000 BC       		.byte	-68
+ 1283 0001 90       		.byte	-112
+ 1284 0002 AC       		.byte	-84
+ 1285 0003 AF       		.byte	-81
+ 1286              		.section	.cycustnvl,"a",%progbits
+ 1287              		.align	2
+ 1288              		.type	cy_meta_custnvl, %object
+ 1289              		.size	cy_meta_custnvl, 4
+ 1290              	cy_meta_custnvl:
+ 1291 0000 00       		.byte	0
+ 1292 0001 00       		.byte	0
+ 1293 0002 40       		.byte	64
+ 1294 0003 05       		.byte	5
+ 1295              		.section	.cymeta,"a",%progbits
+ 1296              		.align	2
+ 1297              		.type	cy_metadata, %object
+ 1298              		.size	cy_metadata, 12
+ 1299              	cy_metadata:
+ 1300 0000 00       		.byte	0
+ 1301 0001 01       		.byte	1
+ 1302 0002 2E       		.byte	46
+ 1303 0003 16       		.byte	22
+ 1304 0004 10       		.byte	16
+ 1305 0005 69       		.byte	105
+ 1306 0006 00       		.byte	0
+ 1307 0007 01       		.byte	1
+ 1308 0008 00       		.byte	0
+ 1309 0009 00       		.byte	0
+ 1310 000a 00       		.byte	0
+ 1311 000b 00       		.byte	0
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\cctHWGBB.s 			page 24
+
+
+ 1312              		.section	.cyflashprotect,"a",%progbits
+ 1313              		.align	2
+ 1314              		.type	cy_meta_flashprotect, %object
+ 1315              		.size	cy_meta_flashprotect, 256
+ 1316              	cy_meta_flashprotect:
+ 1317 0000 00000000 		.space	256
+ 1317      00000000 
+ 1317      00000000 
+ 1317      00000000 
+ 1317      00000000 
+ 1318              		.text
+ 1319              	.Letext0:
+ 1320              		.file 1 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 1321              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 1322              		.file 3 "Generated_Source\\PSoC5\\cymetadata.c"
+ 1323              		.section	.debug_info,"",%progbits
+ 1324              	.Ldebug_info0:
+ 1325 0000 32010000 		.4byte	0x132
+ 1326 0004 0400     		.2byte	0x4
+ 1327 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 1328 000a 04       		.byte	0x4
+ 1329 000b 01       		.uleb128 0x1
+ 1330 000c 95000000 		.4byte	.LASF17
+ 1331 0010 0C       		.byte	0xc
+ 1332 0011 EF010000 		.4byte	.LASF18
+ 1333 0015 16000000 		.4byte	.LASF19
+ 1334 0019 00000000 		.4byte	.Ldebug_line0
+ 1335 001d 02       		.uleb128 0x2
+ 1336 001e 01       		.byte	0x1
+ 1337 001f 06       		.byte	0x6
+ 1338 0020 E3010000 		.4byte	.LASF0
+ 1339 0024 03       		.uleb128 0x3
+ 1340 0025 00000000 		.4byte	.LASF9
+ 1341 0029 01       		.byte	0x1
+ 1342 002a 1D       		.byte	0x1d
+ 1343 002b 2F000000 		.4byte	0x2f
+ 1344 002f 02       		.uleb128 0x2
+ 1345 0030 01       		.byte	0x1
+ 1346 0031 08       		.byte	0x8
+ 1347 0032 87000000 		.4byte	.LASF1
+ 1348 0036 02       		.uleb128 0x2
+ 1349 0037 02       		.byte	0x2
+ 1350 0038 05       		.byte	0x5
+ 1351 0039 D0010000 		.4byte	.LASF2
+ 1352 003d 02       		.uleb128 0x2
+ 1353 003e 02       		.byte	0x2
+ 1354 003f 07       		.byte	0x7
+ 1355 0040 35010000 		.4byte	.LASF3
+ 1356 0044 02       		.uleb128 0x2
+ 1357 0045 04       		.byte	0x4
+ 1358 0046 05       		.byte	0x5
+ 1359 0047 DA010000 		.4byte	.LASF4
+ 1360 004b 02       		.uleb128 0x2
+ 1361 004c 04       		.byte	0x4
+ 1362 004d 07       		.byte	0x7
+ 1363 004e 23010000 		.4byte	.LASF5
+ 1364 0052 02       		.uleb128 0x2
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\cctHWGBB.s 			page 25
+
+
+ 1365 0053 08       		.byte	0x8
+ 1366 0054 05       		.byte	0x5
+ 1367 0055 C2010000 		.4byte	.LASF6
+ 1368 0059 02       		.uleb128 0x2
+ 1369 005a 08       		.byte	0x8
+ 1370 005b 07       		.byte	0x7
+ 1371 005c 77010000 		.4byte	.LASF7
+ 1372 0060 04       		.uleb128 0x4
+ 1373 0061 04       		.byte	0x4
+ 1374 0062 05       		.byte	0x5
+ 1375 0063 696E7400 		.ascii	"int\000"
+ 1376 0067 02       		.uleb128 0x2
+ 1377 0068 04       		.byte	0x4
+ 1378 0069 07       		.byte	0x7
+ 1379 006a 6A010000 		.4byte	.LASF8
+ 1380 006e 03       		.uleb128 0x3
+ 1381 006f 8E010000 		.4byte	.LASF10
+ 1382 0073 02       		.byte	0x2
+ 1383 0074 18       		.byte	0x18
+ 1384 0075 24000000 		.4byte	0x24
+ 1385 0079 05       		.uleb128 0x5
+ 1386 007a 91000000 		.4byte	0x91
+ 1387 007e 8A000000 		.4byte	0x8a
+ 1388 0082 06       		.uleb128 0x6
+ 1389 0083 8A000000 		.4byte	0x8a
+ 1390 0087 DF04     		.2byte	0x4df
+ 1391 0089 00       		.byte	0
+ 1392 008a 02       		.uleb128 0x2
+ 1393 008b 04       		.byte	0x4
+ 1394 008c 07       		.byte	0x7
+ 1395 008d B9010000 		.4byte	.LASF11
+ 1396 0091 07       		.uleb128 0x7
+ 1397 0092 6E000000 		.4byte	0x6e
+ 1398 0096 08       		.uleb128 0x8
+ 1399 0097 58010000 		.4byte	.LASF12
+ 1400 009b 03       		.byte	0x3
+ 1401 009c 1F       		.byte	0x1f
+ 1402 009d A7000000 		.4byte	0xa7
+ 1403 00a1 05       		.uleb128 0x5
+ 1404 00a2 03       		.byte	0x3
+ 1405 00a3 00000000 		.4byte	cy_meta_configecc
+ 1406 00a7 07       		.uleb128 0x7
+ 1407 00a8 79000000 		.4byte	0x79
+ 1408 00ac 05       		.uleb128 0x5
+ 1409 00ad 91000000 		.4byte	0x91
+ 1410 00b1 BC000000 		.4byte	0xbc
+ 1411 00b5 09       		.uleb128 0x9
+ 1412 00b6 8A000000 		.4byte	0x8a
+ 1413 00ba 03       		.byte	0x3
+ 1414 00bb 00       		.byte	0
+ 1415 00bc 08       		.uleb128 0x8
+ 1416 00bd 48010000 		.4byte	.LASF13
+ 1417 00c1 03       		.byte	0x3
+ 1418 00c2 C8       		.byte	0xc8
+ 1419 00c3 CD000000 		.4byte	0xcd
+ 1420 00c7 05       		.uleb128 0x5
+ 1421 00c8 03       		.byte	0x3
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\cctHWGBB.s 			page 26
+
+
+ 1422 00c9 00000000 		.4byte	cy_meta_custnvl
+ 1423 00cd 07       		.uleb128 0x7
+ 1424 00ce AC000000 		.4byte	0xac
+ 1425 00d2 08       		.uleb128 0x8
+ 1426 00d3 AB010000 		.4byte	.LASF14
+ 1427 00d7 03       		.byte	0x3
+ 1428 00d8 D6       		.byte	0xd6
+ 1429 00d9 E3000000 		.4byte	0xe3
+ 1430 00dd 05       		.uleb128 0x5
+ 1431 00de 03       		.byte	0x3
+ 1432 00df 00000000 		.4byte	cy_meta_wonvl
+ 1433 00e3 07       		.uleb128 0x7
+ 1434 00e4 AC000000 		.4byte	0xac
+ 1435 00e8 05       		.uleb128 0x5
+ 1436 00e9 91000000 		.4byte	0x91
+ 1437 00ed F8000000 		.4byte	0xf8
+ 1438 00f1 09       		.uleb128 0x9
+ 1439 00f2 8A000000 		.4byte	0x8a
+ 1440 00f6 FF       		.byte	0xff
+ 1441 00f7 00       		.byte	0
+ 1442 00f8 08       		.uleb128 0x8
+ 1443 00f9 96010000 		.4byte	.LASF15
+ 1444 00fd 03       		.byte	0x3
+ 1445 00fe E4       		.byte	0xe4
+ 1446 00ff 09010000 		.4byte	0x109
+ 1447 0103 05       		.uleb128 0x5
+ 1448 0104 03       		.byte	0x3
+ 1449 0105 00000000 		.4byte	cy_meta_flashprotect
+ 1450 0109 07       		.uleb128 0x7
+ 1451 010a E8000000 		.4byte	0xe8
+ 1452 010e 05       		.uleb128 0x5
+ 1453 010f 91000000 		.4byte	0x91
+ 1454 0113 1E010000 		.4byte	0x11e
+ 1455 0117 09       		.uleb128 0x9
+ 1456 0118 8A000000 		.4byte	0x8a
+ 1457 011c 0B       		.byte	0xb
+ 1458 011d 00       		.byte	0
+ 1459 011e 0A       		.uleb128 0xa
+ 1460 011f 0A000000 		.4byte	.LASF16
+ 1461 0123 03       		.byte	0x3
+ 1462 0124 1101     		.2byte	0x111
+ 1463 0126 30010000 		.4byte	0x130
+ 1464 012a 05       		.uleb128 0x5
+ 1465 012b 03       		.byte	0x3
+ 1466 012c 00000000 		.4byte	cy_metadata
+ 1467 0130 07       		.uleb128 0x7
+ 1468 0131 0E010000 		.4byte	0x10e
+ 1469 0135 00       		.byte	0
+ 1470              		.section	.debug_abbrev,"",%progbits
+ 1471              	.Ldebug_abbrev0:
+ 1472 0000 01       		.uleb128 0x1
+ 1473 0001 11       		.uleb128 0x11
+ 1474 0002 01       		.byte	0x1
+ 1475 0003 25       		.uleb128 0x25
+ 1476 0004 0E       		.uleb128 0xe
+ 1477 0005 13       		.uleb128 0x13
+ 1478 0006 0B       		.uleb128 0xb
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\cctHWGBB.s 			page 27
+
+
+ 1479 0007 03       		.uleb128 0x3
+ 1480 0008 0E       		.uleb128 0xe
+ 1481 0009 1B       		.uleb128 0x1b
+ 1482 000a 0E       		.uleb128 0xe
+ 1483 000b 10       		.uleb128 0x10
+ 1484 000c 17       		.uleb128 0x17
+ 1485 000d 00       		.byte	0
+ 1486 000e 00       		.byte	0
+ 1487 000f 02       		.uleb128 0x2
+ 1488 0010 24       		.uleb128 0x24
+ 1489 0011 00       		.byte	0
+ 1490 0012 0B       		.uleb128 0xb
+ 1491 0013 0B       		.uleb128 0xb
+ 1492 0014 3E       		.uleb128 0x3e
+ 1493 0015 0B       		.uleb128 0xb
+ 1494 0016 03       		.uleb128 0x3
+ 1495 0017 0E       		.uleb128 0xe
+ 1496 0018 00       		.byte	0
+ 1497 0019 00       		.byte	0
+ 1498 001a 03       		.uleb128 0x3
+ 1499 001b 16       		.uleb128 0x16
+ 1500 001c 00       		.byte	0
+ 1501 001d 03       		.uleb128 0x3
+ 1502 001e 0E       		.uleb128 0xe
+ 1503 001f 3A       		.uleb128 0x3a
+ 1504 0020 0B       		.uleb128 0xb
+ 1505 0021 3B       		.uleb128 0x3b
+ 1506 0022 0B       		.uleb128 0xb
+ 1507 0023 49       		.uleb128 0x49
+ 1508 0024 13       		.uleb128 0x13
+ 1509 0025 00       		.byte	0
+ 1510 0026 00       		.byte	0
+ 1511 0027 04       		.uleb128 0x4
+ 1512 0028 24       		.uleb128 0x24
+ 1513 0029 00       		.byte	0
+ 1514 002a 0B       		.uleb128 0xb
+ 1515 002b 0B       		.uleb128 0xb
+ 1516 002c 3E       		.uleb128 0x3e
+ 1517 002d 0B       		.uleb128 0xb
+ 1518 002e 03       		.uleb128 0x3
+ 1519 002f 08       		.uleb128 0x8
+ 1520 0030 00       		.byte	0
+ 1521 0031 00       		.byte	0
+ 1522 0032 05       		.uleb128 0x5
+ 1523 0033 01       		.uleb128 0x1
+ 1524 0034 01       		.byte	0x1
+ 1525 0035 49       		.uleb128 0x49
+ 1526 0036 13       		.uleb128 0x13
+ 1527 0037 01       		.uleb128 0x1
+ 1528 0038 13       		.uleb128 0x13
+ 1529 0039 00       		.byte	0
+ 1530 003a 00       		.byte	0
+ 1531 003b 06       		.uleb128 0x6
+ 1532 003c 21       		.uleb128 0x21
+ 1533 003d 00       		.byte	0
+ 1534 003e 49       		.uleb128 0x49
+ 1535 003f 13       		.uleb128 0x13
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\cctHWGBB.s 			page 28
+
+
+ 1536 0040 2F       		.uleb128 0x2f
+ 1537 0041 05       		.uleb128 0x5
+ 1538 0042 00       		.byte	0
+ 1539 0043 00       		.byte	0
+ 1540 0044 07       		.uleb128 0x7
+ 1541 0045 26       		.uleb128 0x26
+ 1542 0046 00       		.byte	0
+ 1543 0047 49       		.uleb128 0x49
+ 1544 0048 13       		.uleb128 0x13
+ 1545 0049 00       		.byte	0
+ 1546 004a 00       		.byte	0
+ 1547 004b 08       		.uleb128 0x8
+ 1548 004c 34       		.uleb128 0x34
+ 1549 004d 00       		.byte	0
+ 1550 004e 03       		.uleb128 0x3
+ 1551 004f 0E       		.uleb128 0xe
+ 1552 0050 3A       		.uleb128 0x3a
+ 1553 0051 0B       		.uleb128 0xb
+ 1554 0052 3B       		.uleb128 0x3b
+ 1555 0053 0B       		.uleb128 0xb
+ 1556 0054 49       		.uleb128 0x49
+ 1557 0055 13       		.uleb128 0x13
+ 1558 0056 3F       		.uleb128 0x3f
+ 1559 0057 19       		.uleb128 0x19
+ 1560 0058 02       		.uleb128 0x2
+ 1561 0059 18       		.uleb128 0x18
+ 1562 005a 00       		.byte	0
+ 1563 005b 00       		.byte	0
+ 1564 005c 09       		.uleb128 0x9
+ 1565 005d 21       		.uleb128 0x21
+ 1566 005e 00       		.byte	0
+ 1567 005f 49       		.uleb128 0x49
+ 1568 0060 13       		.uleb128 0x13
+ 1569 0061 2F       		.uleb128 0x2f
+ 1570 0062 0B       		.uleb128 0xb
+ 1571 0063 00       		.byte	0
+ 1572 0064 00       		.byte	0
+ 1573 0065 0A       		.uleb128 0xa
+ 1574 0066 34       		.uleb128 0x34
+ 1575 0067 00       		.byte	0
+ 1576 0068 03       		.uleb128 0x3
+ 1577 0069 0E       		.uleb128 0xe
+ 1578 006a 3A       		.uleb128 0x3a
+ 1579 006b 0B       		.uleb128 0xb
+ 1580 006c 3B       		.uleb128 0x3b
+ 1581 006d 05       		.uleb128 0x5
+ 1582 006e 49       		.uleb128 0x49
+ 1583 006f 13       		.uleb128 0x13
+ 1584 0070 3F       		.uleb128 0x3f
+ 1585 0071 19       		.uleb128 0x19
+ 1586 0072 02       		.uleb128 0x2
+ 1587 0073 18       		.uleb128 0x18
+ 1588 0074 00       		.byte	0
+ 1589 0075 00       		.byte	0
+ 1590 0076 00       		.byte	0
+ 1591              		.section	.debug_aranges,"",%progbits
+ 1592 0000 14000000 		.4byte	0x14
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\cctHWGBB.s 			page 29
+
+
+ 1593 0004 0200     		.2byte	0x2
+ 1594 0006 00000000 		.4byte	.Ldebug_info0
+ 1595 000a 04       		.byte	0x4
+ 1596 000b 00       		.byte	0
+ 1597 000c 0000     		.2byte	0
+ 1598 000e 0000     		.2byte	0
+ 1599 0010 00000000 		.4byte	0
+ 1600 0014 00000000 		.4byte	0
+ 1601              		.section	.debug_line,"",%progbits
+ 1602              	.Ldebug_line0:
+ 1603 0000 3D010000 		.section	.debug_str,"MS",%progbits,1
+ 1603      02003701 
+ 1603      00000201 
+ 1603      FB0E0D00 
+ 1603      01010101 
+ 1604              	.LASF9:
+ 1605 0000 5F5F7569 		.ascii	"__uint8_t\000"
+ 1605      6E74385F 
+ 1605      7400
+ 1606              	.LASF16:
+ 1607 000a 63795F6D 		.ascii	"cy_metadata\000"
+ 1607      65746164 
+ 1607      61746100 
+ 1608              	.LASF19:
+ 1609 0016 5C5C4D61 		.ascii	"\\\\Mac\\Dropbox\\Tesi\\Codice\\Tesi_Capodieci_DelP"
+ 1609      635C4472 
+ 1609      6F70626F 
+ 1609      785C5465 
+ 1609      73695C43 
+ 1610 0043 72657465 		.ascii	"rete\\Albumin_Measurement_Pot\\Albumin_Measurement_"
+ 1610      5C416C62 
+ 1610      756D696E 
+ 1610      5F4D6561 
+ 1610      73757265 
+ 1611 0074 506F7465 		.ascii	"Potentiostat.cydsn\000"
+ 1611      6E74696F 
+ 1611      73746174 
+ 1611      2E637964 
+ 1611      736E00
+ 1612              	.LASF1:
+ 1613 0087 756E7369 		.ascii	"unsigned char\000"
+ 1613      676E6564 
+ 1613      20636861 
+ 1613      7200
+ 1614              	.LASF17:
+ 1615 0095 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1615      43313120 
+ 1615      352E342E 
+ 1615      31203230 
+ 1615      31363036 
+ 1616 00c8 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1616      20726576 
+ 1616      6973696F 
+ 1616      6E203233 
+ 1616      37373135 
+ 1617 00fb 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1617      66756E63 
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\cctHWGBB.s 			page 30
+
+
+ 1617      74696F6E 
+ 1617      2D736563 
+ 1617      74696F6E 
+ 1618              	.LASF5:
+ 1619 0123 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1619      20756E73 
+ 1619      69676E65 
+ 1619      6420696E 
+ 1619      7400
+ 1620              	.LASF3:
+ 1621 0135 73686F72 		.ascii	"short unsigned int\000"
+ 1621      7420756E 
+ 1621      7369676E 
+ 1621      65642069 
+ 1621      6E7400
+ 1622              	.LASF13:
+ 1623 0148 63795F6D 		.ascii	"cy_meta_custnvl\000"
+ 1623      6574615F 
+ 1623      63757374 
+ 1623      6E766C00 
+ 1624              	.LASF12:
+ 1625 0158 63795F6D 		.ascii	"cy_meta_configecc\000"
+ 1625      6574615F 
+ 1625      636F6E66 
+ 1625      69676563 
+ 1625      6300
+ 1626              	.LASF8:
+ 1627 016a 756E7369 		.ascii	"unsigned int\000"
+ 1627      676E6564 
+ 1627      20696E74 
+ 1627      00
+ 1628              	.LASF7:
+ 1629 0177 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1629      206C6F6E 
+ 1629      6720756E 
+ 1629      7369676E 
+ 1629      65642069 
+ 1630              	.LASF10:
+ 1631 018e 75696E74 		.ascii	"uint8_t\000"
+ 1631      385F7400 
+ 1632              	.LASF15:
+ 1633 0196 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ 1633      6574615F 
+ 1633      666C6173 
+ 1633      6870726F 
+ 1633      74656374 
+ 1634              	.LASF14:
+ 1635 01ab 63795F6D 		.ascii	"cy_meta_wonvl\000"
+ 1635      6574615F 
+ 1635      776F6E76 
+ 1635      6C00
+ 1636              	.LASF11:
+ 1637 01b9 73697A65 		.ascii	"sizetype\000"
+ 1637      74797065 
+ 1637      00
+ 1638              	.LASF6:
+ 1639 01c2 6C6F6E67 		.ascii	"long long int\000"
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\cctHWGBB.s 			page 31
+
+
+ 1639      206C6F6E 
+ 1639      6720696E 
+ 1639      7400
+ 1640              	.LASF2:
+ 1641 01d0 73686F72 		.ascii	"short int\000"
+ 1641      7420696E 
+ 1641      7400
+ 1642              	.LASF4:
+ 1643 01da 6C6F6E67 		.ascii	"long int\000"
+ 1643      20696E74 
+ 1643      00
+ 1644              	.LASF0:
+ 1645 01e3 7369676E 		.ascii	"signed char\000"
+ 1645      65642063 
+ 1645      68617200 
+ 1646              	.LASF18:
+ 1647 01ef 47656E65 		.ascii	"Generated_Source\\PSoC5\\cymetadata.c\000"
+ 1647      72617465 
+ 1647      645F536F 
+ 1647      75726365 
+ 1647      5C50536F 
+ 1648              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
