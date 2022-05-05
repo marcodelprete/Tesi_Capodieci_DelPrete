@@ -1,0 +1,7 @@
+\\Mac\Dropbox\Tesi\Codice\Tesi_Capodieci_DelPrete\Albumin_Measurement_Pot\Albumin_Measurement_Potentiostat.cydsn\Albumin_Measurement_Potentiostat.cyprj|e27c69a6-7e01-4daf-b09a-74fa9d12d261
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|d3d32742-5023-46c6-ad71-13da1cb0b744
+\\Mac\Home\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|8c722ce0-211f-4a0e-818a-10af7c3a1da3
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|8c207c63-5fc3-4d47-b0e3-c5cf80c1a6d6
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|12914672-e979-4474-b51d-2e4e4440683a
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|e260a8a6-e194-47d1-921a-b6f4e7e6edad
+\\Mac\Home\Desktop\Lab_PSoC\Ann_Library\AnnotationLibrary\AnnotationLibrary_lib\AnnotationLibrary_lib.cylib\AnnotationLibrary_lib.cyprj|3814fb12-f1b6-4a21-ac5d-9aa32e912b22

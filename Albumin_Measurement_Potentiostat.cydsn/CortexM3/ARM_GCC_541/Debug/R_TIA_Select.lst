@@ -1,0 +1,1286 @@
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\ccmUdTao.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"R_TIA_Select.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.R_Tia,"ax",%progbits
+  20              		.align	2
+  21              		.global	R_Tia
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	R_Tia, %function
+  25              	R_Tia:
+  26              	.LFB64:
+  27              		.file 1 "R_TIA_Select.c"
+   1:R_TIA_Select.c **** /* ========================================
+   2:R_TIA_Select.c ****  *
+   3:R_TIA_Select.c ****  * Copyright YOUR COMPANY, THE YEAR
+   4:R_TIA_Select.c ****  * All Rights Reserved
+   5:R_TIA_Select.c ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:R_TIA_Select.c ****  *
+   7:R_TIA_Select.c ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:R_TIA_Select.c ****  * WHICH IS THE PROPERTY OF your company.
+   9:R_TIA_Select.c ****  *
+  10:R_TIA_Select.c ****  * ========================================
+  11:R_TIA_Select.c **** */
+  12:R_TIA_Select.c **** 
+  13:R_TIA_Select.c **** #include "Rx_Hn.h"
+  14:R_TIA_Select.c **** #include "project.h"
+  15:R_TIA_Select.c **** 
+  16:R_TIA_Select.c **** uint32 R_set = 120000;
+  17:R_TIA_Select.c **** 
+  18:R_TIA_Select.c **** 
+  19:R_TIA_Select.c **** uint32 R_Tia(uint8 R_TIA_value){
+  28              		.loc 1 19 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              	.LVL0:
+  33 0000 08B5     		push	{r3, lr}
+  34              		.cfi_def_cfa_offset 8
+  35              		.cfi_offset 3, -8
+  36              		.cfi_offset 14, -4
+  20:R_TIA_Select.c ****     if(R_TIA_value == 0){
+  37              		.loc 1 20 0
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\ccmUdTao.s 			page 2
+
+
+  38 0002 48B9     		cbnz	r0, .L2
+  21:R_TIA_Select.c ****         TIA_SetResFB(TIA_RES_FEEDBACK_20K);
+  39              		.loc 1 21 0
+  40 0004 FFF7FEFF 		bl	TIA_SetResFB
+  41              	.LVL1:
+  22:R_TIA_Select.c ****         Pin_LED_Write(1);
+  42              		.loc 1 22 0
+  43 0008 0120     		movs	r0, #1
+  44 000a FFF7FEFF 		bl	Pin_LED_Write
+  45              	.LVL2:
+  23:R_TIA_Select.c ****         R_set = 20000;
+  46              		.loc 1 23 0
+  47 000e 44F62060 		movw	r0, #20000
+  48 0012 244B     		ldr	r3, .L12
+  49 0014 1860     		str	r0, [r3]
+  24:R_TIA_Select.c ****         return R_set;
+  50              		.loc 1 24 0
+  51 0016 08BD     		pop	{r3, pc}
+  52              	.LVL3:
+  53              	.L2:
+  25:R_TIA_Select.c ****         
+  26:R_TIA_Select.c ****     }
+  27:R_TIA_Select.c ****     else if(R_TIA_value == 1){
+  54              		.loc 1 27 0
+  55 0018 0128     		cmp	r0, #1
+  56 001a 07D1     		bne	.L4
+  28:R_TIA_Select.c ****         TIA_SetResFB(TIA_RES_FEEDBACK_30K);
+  57              		.loc 1 28 0
+  58 001c 0120     		movs	r0, #1
+  59              	.LVL4:
+  60 001e FFF7FEFF 		bl	TIA_SetResFB
+  61              	.LVL5:
+  29:R_TIA_Select.c ****         R_set = 30000;
+  62              		.loc 1 29 0
+  63 0022 47F23050 		movw	r0, #30000
+  64 0026 1F4B     		ldr	r3, .L12
+  65 0028 1860     		str	r0, [r3]
+  30:R_TIA_Select.c ****         return R_set;
+  66              		.loc 1 30 0
+  67 002a 08BD     		pop	{r3, pc}
+  68              	.LVL6:
+  69              	.L4:
+  31:R_TIA_Select.c ****     } 
+  32:R_TIA_Select.c ****     else if(R_TIA_value == 2){
+  70              		.loc 1 32 0
+  71 002c 0228     		cmp	r0, #2
+  72 002e 07D1     		bne	.L5
+  33:R_TIA_Select.c ****         TIA_SetResFB(TIA_RES_FEEDBACK_40K);
+  73              		.loc 1 33 0
+  74 0030 0220     		movs	r0, #2
+  75              	.LVL7:
+  76 0032 FFF7FEFF 		bl	TIA_SetResFB
+  77              	.LVL8:
+  34:R_TIA_Select.c ****         R_set = 40000;
+  78              		.loc 1 34 0
+  79 0036 49F64040 		movw	r0, #40000
+  80 003a 1A4B     		ldr	r3, .L12
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\ccmUdTao.s 			page 3
+
+
+  81 003c 1860     		str	r0, [r3]
+  35:R_TIA_Select.c ****         return R_set;
+  82              		.loc 1 35 0
+  83 003e 08BD     		pop	{r3, pc}
+  84              	.LVL9:
+  85              	.L5:
+  36:R_TIA_Select.c ****     }
+  37:R_TIA_Select.c ****     else if(R_TIA_value == 3){
+  86              		.loc 1 37 0
+  87 0040 0328     		cmp	r0, #3
+  88 0042 06D1     		bne	.L6
+  38:R_TIA_Select.c ****         TIA_SetResFB(TIA_RES_FEEDBACK_80K);
+  89              		.loc 1 38 0
+  90 0044 0320     		movs	r0, #3
+  91              	.LVL10:
+  92 0046 FFF7FEFF 		bl	TIA_SetResFB
+  93              	.LVL11:
+  39:R_TIA_Select.c ****         R_set = 80000;
+  94              		.loc 1 39 0
+  95 004a 1748     		ldr	r0, .L12+4
+  96 004c 154B     		ldr	r3, .L12
+  97 004e 1860     		str	r0, [r3]
+  40:R_TIA_Select.c ****         return R_set;
+  98              		.loc 1 40 0
+  99 0050 08BD     		pop	{r3, pc}
+ 100              	.LVL12:
+ 101              	.L6:
+  41:R_TIA_Select.c ****     }
+  42:R_TIA_Select.c ****     else if(R_TIA_value == 4){
+ 102              		.loc 1 42 0
+ 103 0052 0428     		cmp	r0, #4
+ 104 0054 09D1     		bne	.L7
+  43:R_TIA_Select.c ****         TIA_SetResFB(TIA_RES_FEEDBACK_120K);
+ 105              		.loc 1 43 0
+ 106 0056 0420     		movs	r0, #4
+ 107              	.LVL13:
+ 108 0058 FFF7FEFF 		bl	TIA_SetResFB
+ 109              	.LVL14:
+  44:R_TIA_Select.c ****         Pin_LED_Write(0);
+ 110              		.loc 1 44 0
+ 111 005c 0020     		movs	r0, #0
+ 112 005e FFF7FEFF 		bl	Pin_LED_Write
+ 113              	.LVL15:
+  45:R_TIA_Select.c ****         R_set = 120000;
+ 114              		.loc 1 45 0
+ 115 0062 1248     		ldr	r0, .L12+8
+ 116 0064 0F4B     		ldr	r3, .L12
+ 117 0066 1860     		str	r0, [r3]
+  46:R_TIA_Select.c ****         return R_set;
+ 118              		.loc 1 46 0
+ 119 0068 08BD     		pop	{r3, pc}
+ 120              	.LVL16:
+ 121              	.L7:
+  47:R_TIA_Select.c ****     }
+  48:R_TIA_Select.c ****     else if(R_TIA_value == 5){
+ 122              		.loc 1 48 0
+ 123 006a 0528     		cmp	r0, #5
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\ccmUdTao.s 			page 4
+
+
+ 124 006c 06D1     		bne	.L8
+  49:R_TIA_Select.c ****         TIA_SetResFB(TIA_RES_FEEDBACK_250K);
+ 125              		.loc 1 49 0
+ 126 006e 0520     		movs	r0, #5
+ 127              	.LVL17:
+ 128 0070 FFF7FEFF 		bl	TIA_SetResFB
+ 129              	.LVL18:
+  50:R_TIA_Select.c ****         R_set = 250000;
+ 130              		.loc 1 50 0
+ 131 0074 0E48     		ldr	r0, .L12+12
+ 132 0076 0B4B     		ldr	r3, .L12
+ 133 0078 1860     		str	r0, [r3]
+  51:R_TIA_Select.c ****         return R_set;
+ 134              		.loc 1 51 0
+ 135 007a 08BD     		pop	{r3, pc}
+ 136              	.LVL19:
+ 137              	.L8:
+  52:R_TIA_Select.c ****     }
+  53:R_TIA_Select.c ****     else if(R_TIA_value == 6){
+ 138              		.loc 1 53 0
+ 139 007c 0628     		cmp	r0, #6
+ 140 007e 06D1     		bne	.L9
+  54:R_TIA_Select.c ****         TIA_SetResFB(TIA_RES_FEEDBACK_500K);
+ 141              		.loc 1 54 0
+ 142 0080 0620     		movs	r0, #6
+ 143              	.LVL20:
+ 144 0082 FFF7FEFF 		bl	TIA_SetResFB
+ 145              	.LVL21:
+  55:R_TIA_Select.c ****         R_set = 500000;
+ 146              		.loc 1 55 0
+ 147 0086 0B48     		ldr	r0, .L12+16
+ 148 0088 064B     		ldr	r3, .L12
+ 149 008a 1860     		str	r0, [r3]
+  56:R_TIA_Select.c ****         return R_set;
+ 150              		.loc 1 56 0
+ 151 008c 08BD     		pop	{r3, pc}
+ 152              	.LVL22:
+ 153              	.L9:
+  57:R_TIA_Select.c ****     }
+  58:R_TIA_Select.c ****     else if(R_TIA_value == 7){
+ 154              		.loc 1 58 0
+ 155 008e 0728     		cmp	r0, #7
+ 156 0090 06D1     		bne	.L10
+  59:R_TIA_Select.c ****         TIA_SetResFB(TIA_RES_FEEDBACK_1000K);
+ 157              		.loc 1 59 0
+ 158 0092 0720     		movs	r0, #7
+ 159              	.LVL23:
+ 160 0094 FFF7FEFF 		bl	TIA_SetResFB
+ 161              	.LVL24:
+  60:R_TIA_Select.c ****         R_set = 1000000;
+ 162              		.loc 1 60 0
+ 163 0098 0748     		ldr	r0, .L12+20
+ 164 009a 024B     		ldr	r3, .L12
+ 165 009c 1860     		str	r0, [r3]
+  61:R_TIA_Select.c ****         return R_set;
+ 166              		.loc 1 61 0
+ 167 009e 08BD     		pop	{r3, pc}
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\ccmUdTao.s 			page 5
+
+
+ 168              	.LVL25:
+ 169              	.L10:
+ 170              	.LVL26:
+  62:R_TIA_Select.c ****     }
+  63:R_TIA_Select.c **** }
+ 171              		.loc 1 63 0
+ 172 00a0 08BD     		pop	{r3, pc}
+ 173              	.L13:
+ 174 00a2 00BF     		.align	2
+ 175              	.L12:
+ 176 00a4 00000000 		.word	.LANCHOR0
+ 177 00a8 80380100 		.word	80000
+ 178 00ac C0D40100 		.word	120000
+ 179 00b0 90D00300 		.word	250000
+ 180 00b4 20A10700 		.word	500000
+ 181 00b8 40420F00 		.word	1000000
+ 182              		.cfi_endproc
+ 183              	.LFE64:
+ 184              		.size	R_Tia, .-R_Tia
+ 185              		.global	R_set
+ 186              		.comm	Flag_Two_Period,1,1
+ 187              		.comm	Flag_One_Period,1,1
+ 188              		.comm	Flag_Fifty,1,1
+ 189              		.comm	Flag_Hundred,1,1
+ 190              		.comm	Flag_Programmed,1,1
+ 191              		.comm	Flag_DataCrono,1,1
+ 192              		.comm	Flag_Crono,1,1
+ 193              		.comm	Flag_CV,1,1
+ 194              		.comm	Pot_Range,2,2
+ 195              		.comm	Crono_Pot,2,2
+ 196              		.comm	Pos_Pot,2,2
+ 197              		.comm	Neg_Pot,2,2
+ 198              		.comm	Stop,1,1
+ 199              		.comm	Flag_SetV,1,1
+ 200              		.comm	StartCalibration,1,1
+ 201              		.comm	Received_Ar,4,4
+ 202              		.data
+ 203              		.align	2
+ 204              		.set	.LANCHOR0,. + 0
+ 205              		.type	R_set, %object
+ 206              		.size	R_set, 4
+ 207              	R_set:
+ 208 0000 C0D40100 		.word	120000
+ 209              		.text
+ 210              	.Letext0:
+ 211              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 212              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 213              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 214              		.file 5 "Rx_Hn.h"
+ 215              		.file 6 "Generated_Source\\PSoC5/core_cm3.h"
+ 216              		.file 7 "Generated_Source\\PSoC5/TIA.h"
+ 217              		.file 8 "Generated_Source\\PSoC5/Pin_LED.h"
+ 218              		.section	.debug_info,"",%progbits
+ 219              	.Ldebug_info0:
+ 220 0000 02030000 		.4byte	0x302
+ 221 0004 0400     		.2byte	0x4
+ 222 0006 00000000 		.4byte	.Ldebug_abbrev0
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\ccmUdTao.s 			page 6
+
+
+ 223 000a 04       		.byte	0x4
+ 224 000b 01       		.uleb128 0x1
+ 225 000c 0C010000 		.4byte	.LASF40
+ 226 0010 0C       		.byte	0xc
+ 227 0011 10000000 		.4byte	.LASF41
+ 228 0015 83000000 		.4byte	.LASF42
+ 229 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 230 001d 00000000 		.4byte	0
+ 231 0021 00000000 		.4byte	.Ldebug_line0
+ 232 0025 02       		.uleb128 0x2
+ 233 0026 01       		.byte	0x1
+ 234 0027 06       		.byte	0x6
+ 235 0028 D3020000 		.4byte	.LASF0
+ 236 002c 02       		.uleb128 0x2
+ 237 002d 01       		.byte	0x1
+ 238 002e 08       		.byte	0x8
+ 239 002f FE000000 		.4byte	.LASF1
+ 240 0033 02       		.uleb128 0x2
+ 241 0034 02       		.byte	0x2
+ 242 0035 05       		.byte	0x5
+ 243 0036 B0020000 		.4byte	.LASF2
+ 244 003a 02       		.uleb128 0x2
+ 245 003b 02       		.byte	0x2
+ 246 003c 07       		.byte	0x7
+ 247 003d B8010000 		.4byte	.LASF3
+ 248 0041 03       		.uleb128 0x3
+ 249 0042 38000000 		.4byte	.LASF9
+ 250 0046 02       		.byte	0x2
+ 251 0047 3F       		.byte	0x3f
+ 252 0048 4C000000 		.4byte	0x4c
+ 253 004c 02       		.uleb128 0x2
+ 254 004d 04       		.byte	0x4
+ 255 004e 05       		.byte	0x5
+ 256 004f C0020000 		.4byte	.LASF4
+ 257 0053 02       		.uleb128 0x2
+ 258 0054 04       		.byte	0x4
+ 259 0055 07       		.byte	0x7
+ 260 0056 A6010000 		.4byte	.LASF5
+ 261 005a 02       		.uleb128 0x2
+ 262 005b 08       		.byte	0x8
+ 263 005c 05       		.byte	0x5
+ 264 005d 90020000 		.4byte	.LASF6
+ 265 0061 02       		.uleb128 0x2
+ 266 0062 08       		.byte	0x8
+ 267 0063 07       		.byte	0x7
+ 268 0064 1D020000 		.4byte	.LASF7
+ 269 0068 04       		.uleb128 0x4
+ 270 0069 04       		.byte	0x4
+ 271 006a 05       		.byte	0x5
+ 272 006b 696E7400 		.ascii	"int\000"
+ 273 006f 02       		.uleb128 0x2
+ 274 0070 04       		.byte	0x4
+ 275 0071 07       		.byte	0x7
+ 276 0072 02020000 		.4byte	.LASF8
+ 277 0076 03       		.uleb128 0x3
+ 278 0077 5D000000 		.4byte	.LASF10
+ 279 007b 03       		.byte	0x3
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\ccmUdTao.s 			page 7
+
+
+ 280 007c 2C       		.byte	0x2c
+ 281 007d 41000000 		.4byte	0x41
+ 282 0081 05       		.uleb128 0x5
+ 283 0082 BA020000 		.4byte	.LASF11
+ 284 0086 04       		.byte	0x4
+ 285 0087 E901     		.2byte	0x1e9
+ 286 0089 2C000000 		.4byte	0x2c
+ 287 008d 05       		.uleb128 0x5
+ 288 008e F4010000 		.4byte	.LASF12
+ 289 0092 04       		.byte	0x4
+ 290 0093 EA01     		.2byte	0x1ea
+ 291 0095 3A000000 		.4byte	0x3a
+ 292 0099 05       		.uleb128 0x5
+ 293 009a FB010000 		.4byte	.LASF13
+ 294 009e 04       		.byte	0x4
+ 295 009f EB01     		.2byte	0x1eb
+ 296 00a1 53000000 		.4byte	0x53
+ 297 00a5 05       		.uleb128 0x5
+ 298 00a6 A0010000 		.4byte	.LASF14
+ 299 00aa 04       		.byte	0x4
+ 300 00ab ED01     		.2byte	0x1ed
+ 301 00ad 33000000 		.4byte	0x33
+ 302 00b1 02       		.uleb128 0x2
+ 303 00b2 04       		.byte	0x4
+ 304 00b3 04       		.byte	0x4
+ 305 00b4 72000000 		.4byte	.LASF15
+ 306 00b8 02       		.uleb128 0x2
+ 307 00b9 08       		.byte	0x8
+ 308 00ba 04       		.byte	0x4
+ 309 00bb E5010000 		.4byte	.LASF16
+ 310 00bf 02       		.uleb128 0x2
+ 311 00c0 01       		.byte	0x1
+ 312 00c1 08       		.byte	0x8
+ 313 00c2 A3020000 		.4byte	.LASF17
+ 314 00c6 02       		.uleb128 0x2
+ 315 00c7 08       		.byte	0x8
+ 316 00c8 04       		.byte	0x4
+ 317 00c9 6F020000 		.4byte	.LASF18
+ 318 00cd 02       		.uleb128 0x2
+ 319 00ce 04       		.byte	0x4
+ 320 00cf 07       		.byte	0x7
+ 321 00d0 87020000 		.4byte	.LASF19
+ 322 00d4 06       		.uleb128 0x6
+ 323 00d5 9A010000 		.4byte	.LASF43
+ 324 00d9 01       		.byte	0x1
+ 325 00da 13       		.byte	0x13
+ 326 00db 99000000 		.4byte	0x99
+ 327 00df 00000000 		.4byte	.LFB64
+ 328 00e3 BC000000 		.4byte	.LFE64-.LFB64
+ 329 00e7 01       		.uleb128 0x1
+ 330 00e8 9C       		.byte	0x9c
+ 331 00e9 AD010000 		.4byte	0x1ad
+ 332 00ed 07       		.uleb128 0x7
+ 333 00ee 7B020000 		.4byte	.LASF44
+ 334 00f2 01       		.byte	0x1
+ 335 00f3 13       		.byte	0x13
+ 336 00f4 81000000 		.4byte	0x81
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\ccmUdTao.s 			page 8
+
+
+ 337 00f8 00000000 		.4byte	.LLST0
+ 338 00fc 08       		.uleb128 0x8
+ 339 00fd 08000000 		.4byte	.LVL1
+ 340 0101 EF020000 		.4byte	0x2ef
+ 341 0105 09       		.uleb128 0x9
+ 342 0106 0E000000 		.4byte	.LVL2
+ 343 010a FA020000 		.4byte	0x2fa
+ 344 010e 18010000 		.4byte	0x118
+ 345 0112 0A       		.uleb128 0xa
+ 346 0113 01       		.uleb128 0x1
+ 347 0114 50       		.byte	0x50
+ 348 0115 01       		.uleb128 0x1
+ 349 0116 31       		.byte	0x31
+ 350 0117 00       		.byte	0
+ 351 0118 09       		.uleb128 0x9
+ 352 0119 22000000 		.4byte	.LVL5
+ 353 011d EF020000 		.4byte	0x2ef
+ 354 0121 2B010000 		.4byte	0x12b
+ 355 0125 0A       		.uleb128 0xa
+ 356 0126 01       		.uleb128 0x1
+ 357 0127 50       		.byte	0x50
+ 358 0128 01       		.uleb128 0x1
+ 359 0129 31       		.byte	0x31
+ 360 012a 00       		.byte	0
+ 361 012b 09       		.uleb128 0x9
+ 362 012c 36000000 		.4byte	.LVL8
+ 363 0130 EF020000 		.4byte	0x2ef
+ 364 0134 3E010000 		.4byte	0x13e
+ 365 0138 0A       		.uleb128 0xa
+ 366 0139 01       		.uleb128 0x1
+ 367 013a 50       		.byte	0x50
+ 368 013b 01       		.uleb128 0x1
+ 369 013c 32       		.byte	0x32
+ 370 013d 00       		.byte	0
+ 371 013e 09       		.uleb128 0x9
+ 372 013f 4A000000 		.4byte	.LVL11
+ 373 0143 EF020000 		.4byte	0x2ef
+ 374 0147 51010000 		.4byte	0x151
+ 375 014b 0A       		.uleb128 0xa
+ 376 014c 01       		.uleb128 0x1
+ 377 014d 50       		.byte	0x50
+ 378 014e 01       		.uleb128 0x1
+ 379 014f 33       		.byte	0x33
+ 380 0150 00       		.byte	0
+ 381 0151 09       		.uleb128 0x9
+ 382 0152 5C000000 		.4byte	.LVL14
+ 383 0156 EF020000 		.4byte	0x2ef
+ 384 015a 64010000 		.4byte	0x164
+ 385 015e 0A       		.uleb128 0xa
+ 386 015f 01       		.uleb128 0x1
+ 387 0160 50       		.byte	0x50
+ 388 0161 01       		.uleb128 0x1
+ 389 0162 34       		.byte	0x34
+ 390 0163 00       		.byte	0
+ 391 0164 09       		.uleb128 0x9
+ 392 0165 62000000 		.4byte	.LVL15
+ 393 0169 FA020000 		.4byte	0x2fa
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\ccmUdTao.s 			page 9
+
+
+ 394 016d 77010000 		.4byte	0x177
+ 395 0171 0A       		.uleb128 0xa
+ 396 0172 01       		.uleb128 0x1
+ 397 0173 50       		.byte	0x50
+ 398 0174 01       		.uleb128 0x1
+ 399 0175 30       		.byte	0x30
+ 400 0176 00       		.byte	0
+ 401 0177 09       		.uleb128 0x9
+ 402 0178 74000000 		.4byte	.LVL18
+ 403 017c EF020000 		.4byte	0x2ef
+ 404 0180 8A010000 		.4byte	0x18a
+ 405 0184 0A       		.uleb128 0xa
+ 406 0185 01       		.uleb128 0x1
+ 407 0186 50       		.byte	0x50
+ 408 0187 01       		.uleb128 0x1
+ 409 0188 35       		.byte	0x35
+ 410 0189 00       		.byte	0
+ 411 018a 09       		.uleb128 0x9
+ 412 018b 86000000 		.4byte	.LVL21
+ 413 018f EF020000 		.4byte	0x2ef
+ 414 0193 9D010000 		.4byte	0x19d
+ 415 0197 0A       		.uleb128 0xa
+ 416 0198 01       		.uleb128 0x1
+ 417 0199 50       		.byte	0x50
+ 418 019a 01       		.uleb128 0x1
+ 419 019b 36       		.byte	0x36
+ 420 019c 00       		.byte	0
+ 421 019d 0B       		.uleb128 0xb
+ 422 019e 98000000 		.4byte	.LVL24
+ 423 01a2 EF020000 		.4byte	0x2ef
+ 424 01a6 0A       		.uleb128 0xa
+ 425 01a7 01       		.uleb128 0x1
+ 426 01a8 50       		.byte	0x50
+ 427 01a9 01       		.uleb128 0x1
+ 428 01aa 37       		.byte	0x37
+ 429 01ab 00       		.byte	0
+ 430 01ac 00       		.byte	0
+ 431 01ad 0C       		.uleb128 0xc
+ 432 01ae 8D000000 		.4byte	0x8d
+ 433 01b2 BD010000 		.4byte	0x1bd
+ 434 01b6 0D       		.uleb128 0xd
+ 435 01b7 CD000000 		.4byte	0xcd
+ 436 01bb 01       		.byte	0x1
+ 437 01bc 00       		.byte	0
+ 438 01bd 0E       		.uleb128 0xe
+ 439 01be 63020000 		.4byte	.LASF20
+ 440 01c2 05       		.byte	0x5
+ 441 01c3 12       		.byte	0x12
+ 442 01c4 AD010000 		.4byte	0x1ad
+ 443 01c8 05       		.uleb128 0x5
+ 444 01c9 03       		.byte	0x3
+ 445 01ca 00000000 		.4byte	Received_Ar
+ 446 01ce 0E       		.uleb128 0xe
+ 447 01cf 27000000 		.4byte	.LASF21
+ 448 01d3 05       		.byte	0x5
+ 449 01d4 15       		.byte	0x15
+ 450 01d5 81000000 		.4byte	0x81
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\ccmUdTao.s 			page 10
+
+
+ 451 01d9 05       		.uleb128 0x5
+ 452 01da 03       		.byte	0x3
+ 453 01db 00000000 		.4byte	StartCalibration
+ 454 01df 0E       		.uleb128 0xe
+ 455 01e0 F4000000 		.4byte	.LASF22
+ 456 01e4 05       		.byte	0x5
+ 457 01e5 16       		.byte	0x16
+ 458 01e6 81000000 		.4byte	0x81
+ 459 01ea 05       		.uleb128 0x5
+ 460 01eb 03       		.byte	0x3
+ 461 01ec 00000000 		.4byte	Flag_SetV
+ 462 01f0 0E       		.uleb128 0xe
+ 463 01f1 9E020000 		.4byte	.LASF23
+ 464 01f5 05       		.byte	0x5
+ 465 01f6 17       		.byte	0x17
+ 466 01f7 81000000 		.4byte	0x81
+ 467 01fb 05       		.uleb128 0x5
+ 468 01fc 03       		.byte	0x3
+ 469 01fd 00000000 		.4byte	Stop
+ 470 0201 0E       		.uleb128 0xe
+ 471 0202 EC010000 		.4byte	.LASF24
+ 472 0206 05       		.byte	0x5
+ 473 0207 18       		.byte	0x18
+ 474 0208 A5000000 		.4byte	0xa5
+ 475 020c 05       		.uleb128 0x5
+ 476 020d 03       		.byte	0x3
+ 477 020e 00000000 		.4byte	Neg_Pot
+ 478 0212 0E       		.uleb128 0xe
+ 479 0213 A8020000 		.4byte	.LASF25
+ 480 0217 05       		.byte	0x5
+ 481 0218 19       		.byte	0x19
+ 482 0219 A5000000 		.4byte	0xa5
+ 483 021d 05       		.uleb128 0x5
+ 484 021e 03       		.byte	0x3
+ 485 021f 00000000 		.4byte	Pos_Pot
+ 486 0223 0E       		.uleb128 0xe
+ 487 0224 48000000 		.4byte	.LASF26
+ 488 0228 05       		.byte	0x5
+ 489 0229 1A       		.byte	0x1a
+ 490 022a A5000000 		.4byte	0xa5
+ 491 022e 05       		.uleb128 0x5
+ 492 022f 03       		.byte	0x3
+ 493 0230 00000000 		.4byte	Crono_Pot
+ 494 0234 0E       		.uleb128 0xe
+ 495 0235 C9020000 		.4byte	.LASF27
+ 496 0239 05       		.byte	0x5
+ 497 023a 1B       		.byte	0x1b
+ 498 023b 8D000000 		.4byte	0x8d
+ 499 023f 05       		.uleb128 0x5
+ 500 0240 03       		.byte	0x3
+ 501 0241 00000000 		.4byte	Pot_Range
+ 502 0245 0E       		.uleb128 0xe
+ 503 0246 1F000000 		.4byte	.LASF28
+ 504 024a 05       		.byte	0x5
+ 505 024b 1C       		.byte	0x1c
+ 506 024c 81000000 		.4byte	0x81
+ 507 0250 05       		.uleb128 0x5
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\ccmUdTao.s 			page 11
+
+
+ 508 0251 03       		.byte	0x3
+ 509 0252 00000000 		.4byte	Flag_CV
+ 510 0256 0E       		.uleb128 0xe
+ 511 0257 78000000 		.4byte	.LASF29
+ 512 025b 05       		.byte	0x5
+ 513 025c 1D       		.byte	0x1d
+ 514 025d 81000000 		.4byte	0x81
+ 515 0261 05       		.uleb128 0x5
+ 516 0262 03       		.byte	0x3
+ 517 0263 00000000 		.4byte	Flag_Crono
+ 518 0267 0E       		.uleb128 0xe
+ 519 0268 54020000 		.4byte	.LASF30
+ 520 026c 05       		.byte	0x5
+ 521 026d 1E       		.byte	0x1e
+ 522 026e 81000000 		.4byte	0x81
+ 523 0272 05       		.uleb128 0x5
+ 524 0273 03       		.byte	0x3
+ 525 0274 00000000 		.4byte	Flag_DataCrono
+ 526 0278 0E       		.uleb128 0xe
+ 527 0279 00000000 		.4byte	.LASF31
+ 528 027d 05       		.byte	0x5
+ 529 027e 1F       		.byte	0x1f
+ 530 027f 81000000 		.4byte	0x81
+ 531 0283 05       		.uleb128 0x5
+ 532 0284 03       		.byte	0x3
+ 533 0285 00000000 		.4byte	Flag_Programmed
+ 534 0289 0E       		.uleb128 0xe
+ 535 028a CB010000 		.4byte	.LASF32
+ 536 028e 05       		.byte	0x5
+ 537 028f 20       		.byte	0x20
+ 538 0290 81000000 		.4byte	0x81
+ 539 0294 05       		.uleb128 0x5
+ 540 0295 03       		.byte	0x3
+ 541 0296 00000000 		.4byte	Flag_Hundred
+ 542 029a 0E       		.uleb128 0xe
+ 543 029b 52000000 		.4byte	.LASF33
+ 544 029f 05       		.byte	0x5
+ 545 02a0 21       		.byte	0x21
+ 546 02a1 81000000 		.4byte	0x81
+ 547 02a5 05       		.uleb128 0x5
+ 548 02a6 03       		.byte	0x3
+ 549 02a7 00000000 		.4byte	Flag_Fifty
+ 550 02ab 0E       		.uleb128 0xe
+ 551 02ac 44020000 		.4byte	.LASF34
+ 552 02b0 05       		.byte	0x5
+ 553 02b1 22       		.byte	0x22
+ 554 02b2 81000000 		.4byte	0x81
+ 555 02b6 05       		.uleb128 0x5
+ 556 02b7 03       		.byte	0x3
+ 557 02b8 00000000 		.4byte	Flag_One_Period
+ 558 02bc 0E       		.uleb128 0xe
+ 559 02bd 34020000 		.4byte	.LASF35
+ 560 02c1 05       		.byte	0x5
+ 561 02c2 23       		.byte	0x23
+ 562 02c3 81000000 		.4byte	0x81
+ 563 02c7 05       		.uleb128 0x5
+ 564 02c8 03       		.byte	0x3
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\ccmUdTao.s 			page 12
+
+
+ 565 02c9 00000000 		.4byte	Flag_Two_Period
+ 566 02cd 0F       		.uleb128 0xf
+ 567 02ce D8010000 		.4byte	.LASF36
+ 568 02d2 06       		.byte	0x6
+ 569 02d3 1207     		.2byte	0x712
+ 570 02d5 D9020000 		.4byte	0x2d9
+ 571 02d9 10       		.uleb128 0x10
+ 572 02da 76000000 		.4byte	0x76
+ 573 02de 0E       		.uleb128 0xe
+ 574 02df 42000000 		.4byte	.LASF37
+ 575 02e3 01       		.byte	0x1
+ 576 02e4 10       		.byte	0x10
+ 577 02e5 99000000 		.4byte	0x99
+ 578 02e9 05       		.uleb128 0x5
+ 579 02ea 03       		.byte	0x3
+ 580 02eb 00000000 		.4byte	R_set
+ 581 02ef 11       		.uleb128 0x11
+ 582 02f0 65000000 		.4byte	.LASF38
+ 583 02f4 65000000 		.4byte	.LASF38
+ 584 02f8 07       		.byte	0x7
+ 585 02f9 40       		.byte	0x40
+ 586 02fa 11       		.uleb128 0x11
+ 587 02fb 0F020000 		.4byte	.LASF39
+ 588 02ff 0F020000 		.4byte	.LASF39
+ 589 0303 08       		.byte	0x8
+ 590 0304 26       		.byte	0x26
+ 591 0305 00       		.byte	0
+ 592              		.section	.debug_abbrev,"",%progbits
+ 593              	.Ldebug_abbrev0:
+ 594 0000 01       		.uleb128 0x1
+ 595 0001 11       		.uleb128 0x11
+ 596 0002 01       		.byte	0x1
+ 597 0003 25       		.uleb128 0x25
+ 598 0004 0E       		.uleb128 0xe
+ 599 0005 13       		.uleb128 0x13
+ 600 0006 0B       		.uleb128 0xb
+ 601 0007 03       		.uleb128 0x3
+ 602 0008 0E       		.uleb128 0xe
+ 603 0009 1B       		.uleb128 0x1b
+ 604 000a 0E       		.uleb128 0xe
+ 605 000b 55       		.uleb128 0x55
+ 606 000c 17       		.uleb128 0x17
+ 607 000d 11       		.uleb128 0x11
+ 608 000e 01       		.uleb128 0x1
+ 609 000f 10       		.uleb128 0x10
+ 610 0010 17       		.uleb128 0x17
+ 611 0011 00       		.byte	0
+ 612 0012 00       		.byte	0
+ 613 0013 02       		.uleb128 0x2
+ 614 0014 24       		.uleb128 0x24
+ 615 0015 00       		.byte	0
+ 616 0016 0B       		.uleb128 0xb
+ 617 0017 0B       		.uleb128 0xb
+ 618 0018 3E       		.uleb128 0x3e
+ 619 0019 0B       		.uleb128 0xb
+ 620 001a 03       		.uleb128 0x3
+ 621 001b 0E       		.uleb128 0xe
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\ccmUdTao.s 			page 13
+
+
+ 622 001c 00       		.byte	0
+ 623 001d 00       		.byte	0
+ 624 001e 03       		.uleb128 0x3
+ 625 001f 16       		.uleb128 0x16
+ 626 0020 00       		.byte	0
+ 627 0021 03       		.uleb128 0x3
+ 628 0022 0E       		.uleb128 0xe
+ 629 0023 3A       		.uleb128 0x3a
+ 630 0024 0B       		.uleb128 0xb
+ 631 0025 3B       		.uleb128 0x3b
+ 632 0026 0B       		.uleb128 0xb
+ 633 0027 49       		.uleb128 0x49
+ 634 0028 13       		.uleb128 0x13
+ 635 0029 00       		.byte	0
+ 636 002a 00       		.byte	0
+ 637 002b 04       		.uleb128 0x4
+ 638 002c 24       		.uleb128 0x24
+ 639 002d 00       		.byte	0
+ 640 002e 0B       		.uleb128 0xb
+ 641 002f 0B       		.uleb128 0xb
+ 642 0030 3E       		.uleb128 0x3e
+ 643 0031 0B       		.uleb128 0xb
+ 644 0032 03       		.uleb128 0x3
+ 645 0033 08       		.uleb128 0x8
+ 646 0034 00       		.byte	0
+ 647 0035 00       		.byte	0
+ 648 0036 05       		.uleb128 0x5
+ 649 0037 16       		.uleb128 0x16
+ 650 0038 00       		.byte	0
+ 651 0039 03       		.uleb128 0x3
+ 652 003a 0E       		.uleb128 0xe
+ 653 003b 3A       		.uleb128 0x3a
+ 654 003c 0B       		.uleb128 0xb
+ 655 003d 3B       		.uleb128 0x3b
+ 656 003e 05       		.uleb128 0x5
+ 657 003f 49       		.uleb128 0x49
+ 658 0040 13       		.uleb128 0x13
+ 659 0041 00       		.byte	0
+ 660 0042 00       		.byte	0
+ 661 0043 06       		.uleb128 0x6
+ 662 0044 2E       		.uleb128 0x2e
+ 663 0045 01       		.byte	0x1
+ 664 0046 3F       		.uleb128 0x3f
+ 665 0047 19       		.uleb128 0x19
+ 666 0048 03       		.uleb128 0x3
+ 667 0049 0E       		.uleb128 0xe
+ 668 004a 3A       		.uleb128 0x3a
+ 669 004b 0B       		.uleb128 0xb
+ 670 004c 3B       		.uleb128 0x3b
+ 671 004d 0B       		.uleb128 0xb
+ 672 004e 27       		.uleb128 0x27
+ 673 004f 19       		.uleb128 0x19
+ 674 0050 49       		.uleb128 0x49
+ 675 0051 13       		.uleb128 0x13
+ 676 0052 11       		.uleb128 0x11
+ 677 0053 01       		.uleb128 0x1
+ 678 0054 12       		.uleb128 0x12
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\ccmUdTao.s 			page 14
+
+
+ 679 0055 06       		.uleb128 0x6
+ 680 0056 40       		.uleb128 0x40
+ 681 0057 18       		.uleb128 0x18
+ 682 0058 9742     		.uleb128 0x2117
+ 683 005a 19       		.uleb128 0x19
+ 684 005b 01       		.uleb128 0x1
+ 685 005c 13       		.uleb128 0x13
+ 686 005d 00       		.byte	0
+ 687 005e 00       		.byte	0
+ 688 005f 07       		.uleb128 0x7
+ 689 0060 05       		.uleb128 0x5
+ 690 0061 00       		.byte	0
+ 691 0062 03       		.uleb128 0x3
+ 692 0063 0E       		.uleb128 0xe
+ 693 0064 3A       		.uleb128 0x3a
+ 694 0065 0B       		.uleb128 0xb
+ 695 0066 3B       		.uleb128 0x3b
+ 696 0067 0B       		.uleb128 0xb
+ 697 0068 49       		.uleb128 0x49
+ 698 0069 13       		.uleb128 0x13
+ 699 006a 02       		.uleb128 0x2
+ 700 006b 17       		.uleb128 0x17
+ 701 006c 00       		.byte	0
+ 702 006d 00       		.byte	0
+ 703 006e 08       		.uleb128 0x8
+ 704 006f 898201   		.uleb128 0x4109
+ 705 0072 00       		.byte	0
+ 706 0073 11       		.uleb128 0x11
+ 707 0074 01       		.uleb128 0x1
+ 708 0075 31       		.uleb128 0x31
+ 709 0076 13       		.uleb128 0x13
+ 710 0077 00       		.byte	0
+ 711 0078 00       		.byte	0
+ 712 0079 09       		.uleb128 0x9
+ 713 007a 898201   		.uleb128 0x4109
+ 714 007d 01       		.byte	0x1
+ 715 007e 11       		.uleb128 0x11
+ 716 007f 01       		.uleb128 0x1
+ 717 0080 31       		.uleb128 0x31
+ 718 0081 13       		.uleb128 0x13
+ 719 0082 01       		.uleb128 0x1
+ 720 0083 13       		.uleb128 0x13
+ 721 0084 00       		.byte	0
+ 722 0085 00       		.byte	0
+ 723 0086 0A       		.uleb128 0xa
+ 724 0087 8A8201   		.uleb128 0x410a
+ 725 008a 00       		.byte	0
+ 726 008b 02       		.uleb128 0x2
+ 727 008c 18       		.uleb128 0x18
+ 728 008d 9142     		.uleb128 0x2111
+ 729 008f 18       		.uleb128 0x18
+ 730 0090 00       		.byte	0
+ 731 0091 00       		.byte	0
+ 732 0092 0B       		.uleb128 0xb
+ 733 0093 898201   		.uleb128 0x4109
+ 734 0096 01       		.byte	0x1
+ 735 0097 11       		.uleb128 0x11
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\ccmUdTao.s 			page 15
+
+
+ 736 0098 01       		.uleb128 0x1
+ 737 0099 31       		.uleb128 0x31
+ 738 009a 13       		.uleb128 0x13
+ 739 009b 00       		.byte	0
+ 740 009c 00       		.byte	0
+ 741 009d 0C       		.uleb128 0xc
+ 742 009e 01       		.uleb128 0x1
+ 743 009f 01       		.byte	0x1
+ 744 00a0 49       		.uleb128 0x49
+ 745 00a1 13       		.uleb128 0x13
+ 746 00a2 01       		.uleb128 0x1
+ 747 00a3 13       		.uleb128 0x13
+ 748 00a4 00       		.byte	0
+ 749 00a5 00       		.byte	0
+ 750 00a6 0D       		.uleb128 0xd
+ 751 00a7 21       		.uleb128 0x21
+ 752 00a8 00       		.byte	0
+ 753 00a9 49       		.uleb128 0x49
+ 754 00aa 13       		.uleb128 0x13
+ 755 00ab 2F       		.uleb128 0x2f
+ 756 00ac 0B       		.uleb128 0xb
+ 757 00ad 00       		.byte	0
+ 758 00ae 00       		.byte	0
+ 759 00af 0E       		.uleb128 0xe
+ 760 00b0 34       		.uleb128 0x34
+ 761 00b1 00       		.byte	0
+ 762 00b2 03       		.uleb128 0x3
+ 763 00b3 0E       		.uleb128 0xe
+ 764 00b4 3A       		.uleb128 0x3a
+ 765 00b5 0B       		.uleb128 0xb
+ 766 00b6 3B       		.uleb128 0x3b
+ 767 00b7 0B       		.uleb128 0xb
+ 768 00b8 49       		.uleb128 0x49
+ 769 00b9 13       		.uleb128 0x13
+ 770 00ba 3F       		.uleb128 0x3f
+ 771 00bb 19       		.uleb128 0x19
+ 772 00bc 02       		.uleb128 0x2
+ 773 00bd 18       		.uleb128 0x18
+ 774 00be 00       		.byte	0
+ 775 00bf 00       		.byte	0
+ 776 00c0 0F       		.uleb128 0xf
+ 777 00c1 34       		.uleb128 0x34
+ 778 00c2 00       		.byte	0
+ 779 00c3 03       		.uleb128 0x3
+ 780 00c4 0E       		.uleb128 0xe
+ 781 00c5 3A       		.uleb128 0x3a
+ 782 00c6 0B       		.uleb128 0xb
+ 783 00c7 3B       		.uleb128 0x3b
+ 784 00c8 05       		.uleb128 0x5
+ 785 00c9 49       		.uleb128 0x49
+ 786 00ca 13       		.uleb128 0x13
+ 787 00cb 3F       		.uleb128 0x3f
+ 788 00cc 19       		.uleb128 0x19
+ 789 00cd 3C       		.uleb128 0x3c
+ 790 00ce 19       		.uleb128 0x19
+ 791 00cf 00       		.byte	0
+ 792 00d0 00       		.byte	0
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\ccmUdTao.s 			page 16
+
+
+ 793 00d1 10       		.uleb128 0x10
+ 794 00d2 35       		.uleb128 0x35
+ 795 00d3 00       		.byte	0
+ 796 00d4 49       		.uleb128 0x49
+ 797 00d5 13       		.uleb128 0x13
+ 798 00d6 00       		.byte	0
+ 799 00d7 00       		.byte	0
+ 800 00d8 11       		.uleb128 0x11
+ 801 00d9 2E       		.uleb128 0x2e
+ 802 00da 00       		.byte	0
+ 803 00db 3F       		.uleb128 0x3f
+ 804 00dc 19       		.uleb128 0x19
+ 805 00dd 3C       		.uleb128 0x3c
+ 806 00de 19       		.uleb128 0x19
+ 807 00df 6E       		.uleb128 0x6e
+ 808 00e0 0E       		.uleb128 0xe
+ 809 00e1 03       		.uleb128 0x3
+ 810 00e2 0E       		.uleb128 0xe
+ 811 00e3 3A       		.uleb128 0x3a
+ 812 00e4 0B       		.uleb128 0xb
+ 813 00e5 3B       		.uleb128 0x3b
+ 814 00e6 0B       		.uleb128 0xb
+ 815 00e7 00       		.byte	0
+ 816 00e8 00       		.byte	0
+ 817 00e9 00       		.byte	0
+ 818              		.section	.debug_loc,"",%progbits
+ 819              	.Ldebug_loc0:
+ 820              	.LLST0:
+ 821 0000 00000000 		.4byte	.LVL0
+ 822 0004 07000000 		.4byte	.LVL1-1
+ 823 0008 0100     		.2byte	0x1
+ 824 000a 50       		.byte	0x50
+ 825 000b 07000000 		.4byte	.LVL1-1
+ 826 000f 18000000 		.4byte	.LVL3
+ 827 0013 0400     		.2byte	0x4
+ 828 0015 F3       		.byte	0xf3
+ 829 0016 01       		.uleb128 0x1
+ 830 0017 50       		.byte	0x50
+ 831 0018 9F       		.byte	0x9f
+ 832 0019 18000000 		.4byte	.LVL3
+ 833 001d 1E000000 		.4byte	.LVL4
+ 834 0021 0100     		.2byte	0x1
+ 835 0023 50       		.byte	0x50
+ 836 0024 1E000000 		.4byte	.LVL4
+ 837 0028 2C000000 		.4byte	.LVL6
+ 838 002c 0400     		.2byte	0x4
+ 839 002e F3       		.byte	0xf3
+ 840 002f 01       		.uleb128 0x1
+ 841 0030 50       		.byte	0x50
+ 842 0031 9F       		.byte	0x9f
+ 843 0032 2C000000 		.4byte	.LVL6
+ 844 0036 32000000 		.4byte	.LVL7
+ 845 003a 0100     		.2byte	0x1
+ 846 003c 50       		.byte	0x50
+ 847 003d 32000000 		.4byte	.LVL7
+ 848 0041 40000000 		.4byte	.LVL9
+ 849 0045 0400     		.2byte	0x4
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\ccmUdTao.s 			page 17
+
+
+ 850 0047 F3       		.byte	0xf3
+ 851 0048 01       		.uleb128 0x1
+ 852 0049 50       		.byte	0x50
+ 853 004a 9F       		.byte	0x9f
+ 854 004b 40000000 		.4byte	.LVL9
+ 855 004f 46000000 		.4byte	.LVL10
+ 856 0053 0100     		.2byte	0x1
+ 857 0055 50       		.byte	0x50
+ 858 0056 46000000 		.4byte	.LVL10
+ 859 005a 52000000 		.4byte	.LVL12
+ 860 005e 0400     		.2byte	0x4
+ 861 0060 F3       		.byte	0xf3
+ 862 0061 01       		.uleb128 0x1
+ 863 0062 50       		.byte	0x50
+ 864 0063 9F       		.byte	0x9f
+ 865 0064 52000000 		.4byte	.LVL12
+ 866 0068 58000000 		.4byte	.LVL13
+ 867 006c 0100     		.2byte	0x1
+ 868 006e 50       		.byte	0x50
+ 869 006f 58000000 		.4byte	.LVL13
+ 870 0073 6A000000 		.4byte	.LVL16
+ 871 0077 0400     		.2byte	0x4
+ 872 0079 F3       		.byte	0xf3
+ 873 007a 01       		.uleb128 0x1
+ 874 007b 50       		.byte	0x50
+ 875 007c 9F       		.byte	0x9f
+ 876 007d 6A000000 		.4byte	.LVL16
+ 877 0081 70000000 		.4byte	.LVL17
+ 878 0085 0100     		.2byte	0x1
+ 879 0087 50       		.byte	0x50
+ 880 0088 70000000 		.4byte	.LVL17
+ 881 008c 7C000000 		.4byte	.LVL19
+ 882 0090 0400     		.2byte	0x4
+ 883 0092 F3       		.byte	0xf3
+ 884 0093 01       		.uleb128 0x1
+ 885 0094 50       		.byte	0x50
+ 886 0095 9F       		.byte	0x9f
+ 887 0096 7C000000 		.4byte	.LVL19
+ 888 009a 82000000 		.4byte	.LVL20
+ 889 009e 0100     		.2byte	0x1
+ 890 00a0 50       		.byte	0x50
+ 891 00a1 82000000 		.4byte	.LVL20
+ 892 00a5 8E000000 		.4byte	.LVL22
+ 893 00a9 0400     		.2byte	0x4
+ 894 00ab F3       		.byte	0xf3
+ 895 00ac 01       		.uleb128 0x1
+ 896 00ad 50       		.byte	0x50
+ 897 00ae 9F       		.byte	0x9f
+ 898 00af 8E000000 		.4byte	.LVL22
+ 899 00b3 94000000 		.4byte	.LVL23
+ 900 00b7 0100     		.2byte	0x1
+ 901 00b9 50       		.byte	0x50
+ 902 00ba 94000000 		.4byte	.LVL23
+ 903 00be A0000000 		.4byte	.LVL25
+ 904 00c2 0400     		.2byte	0x4
+ 905 00c4 F3       		.byte	0xf3
+ 906 00c5 01       		.uleb128 0x1
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\ccmUdTao.s 			page 18
+
+
+ 907 00c6 50       		.byte	0x50
+ 908 00c7 9F       		.byte	0x9f
+ 909 00c8 A0000000 		.4byte	.LVL25
+ 910 00cc A0000000 		.4byte	.LVL26
+ 911 00d0 0100     		.2byte	0x1
+ 912 00d2 50       		.byte	0x50
+ 913 00d3 A0000000 		.4byte	.LVL26
+ 914 00d7 BC000000 		.4byte	.LFE64
+ 915 00db 0400     		.2byte	0x4
+ 916 00dd F3       		.byte	0xf3
+ 917 00de 01       		.uleb128 0x1
+ 918 00df 50       		.byte	0x50
+ 919 00e0 9F       		.byte	0x9f
+ 920 00e1 00000000 		.4byte	0
+ 921 00e5 00000000 		.4byte	0
+ 922              		.section	.debug_aranges,"",%progbits
+ 923 0000 1C000000 		.4byte	0x1c
+ 924 0004 0200     		.2byte	0x2
+ 925 0006 00000000 		.4byte	.Ldebug_info0
+ 926 000a 04       		.byte	0x4
+ 927 000b 00       		.byte	0
+ 928 000c 0000     		.2byte	0
+ 929 000e 0000     		.2byte	0
+ 930 0010 00000000 		.4byte	.LFB64
+ 931 0014 BC000000 		.4byte	.LFE64-.LFB64
+ 932 0018 00000000 		.4byte	0
+ 933 001c 00000000 		.4byte	0
+ 934              		.section	.debug_ranges,"",%progbits
+ 935              	.Ldebug_ranges0:
+ 936 0000 00000000 		.4byte	.LFB64
+ 937 0004 BC000000 		.4byte	.LFE64
+ 938 0008 00000000 		.4byte	0
+ 939 000c 00000000 		.4byte	0
+ 940              		.section	.debug_line,"",%progbits
+ 941              	.Ldebug_line0:
+ 942 0000 AD010000 		.section	.debug_str,"MS",%progbits,1
+ 942      02007501 
+ 942      00000201 
+ 942      FB0E0D00 
+ 942      01010101 
+ 943              	.LASF31:
+ 944 0000 466C6167 		.ascii	"Flag_Programmed\000"
+ 944      5F50726F 
+ 944      6772616D 
+ 944      6D656400 
+ 945              	.LASF41:
+ 946 0010 525F5449 		.ascii	"R_TIA_Select.c\000"
+ 946      415F5365 
+ 946      6C656374 
+ 946      2E6300
+ 947              	.LASF28:
+ 948 001f 466C6167 		.ascii	"Flag_CV\000"
+ 948      5F435600 
+ 949              	.LASF21:
+ 950 0027 53746172 		.ascii	"StartCalibration\000"
+ 950      7443616C 
+ 950      69627261 
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\ccmUdTao.s 			page 19
+
+
+ 950      74696F6E 
+ 950      00
+ 951              	.LASF9:
+ 952 0038 5F5F696E 		.ascii	"__int32_t\000"
+ 952      7433325F 
+ 952      7400
+ 953              	.LASF37:
+ 954 0042 525F7365 		.ascii	"R_set\000"
+ 954      7400
+ 955              	.LASF26:
+ 956 0048 43726F6E 		.ascii	"Crono_Pot\000"
+ 956      6F5F506F 
+ 956      7400
+ 957              	.LASF33:
+ 958 0052 466C6167 		.ascii	"Flag_Fifty\000"
+ 958      5F466966 
+ 958      747900
+ 959              	.LASF10:
+ 960 005d 696E7433 		.ascii	"int32_t\000"
+ 960      325F7400 
+ 961              	.LASF38:
+ 962 0065 5449415F 		.ascii	"TIA_SetResFB\000"
+ 962      53657452 
+ 962      65734642 
+ 962      00
+ 963              	.LASF15:
+ 964 0072 666C6F61 		.ascii	"float\000"
+ 964      7400
+ 965              	.LASF29:
+ 966 0078 466C6167 		.ascii	"Flag_Crono\000"
+ 966      5F43726F 
+ 966      6E6F00
+ 967              	.LASF42:
+ 968 0083 5C5C4D61 		.ascii	"\\\\Mac\\Dropbox\\Tesi\\Codice\\Tesi_Capodieci_DelP"
+ 968      635C4472 
+ 968      6F70626F 
+ 968      785C5465 
+ 968      73695C43 
+ 969 00b0 72657465 		.ascii	"rete\\Albumin_Measurement_Pot\\Albumin_Measurement_"
+ 969      5C416C62 
+ 969      756D696E 
+ 969      5F4D6561 
+ 969      73757265 
+ 970 00e1 506F7465 		.ascii	"Potentiostat.cydsn\000"
+ 970      6E74696F 
+ 970      73746174 
+ 970      2E637964 
+ 970      736E00
+ 971              	.LASF22:
+ 972 00f4 466C6167 		.ascii	"Flag_SetV\000"
+ 972      5F536574 
+ 972      5600
+ 973              	.LASF1:
+ 974 00fe 756E7369 		.ascii	"unsigned char\000"
+ 974      676E6564 
+ 974      20636861 
+ 974      7200
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\ccmUdTao.s 			page 20
+
+
+ 975              	.LASF40:
+ 976 010c 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 976      43313120 
+ 976      352E342E 
+ 976      31203230 
+ 976      31363036 
+ 977 013f 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 977      20726576 
+ 977      6973696F 
+ 977      6E203233 
+ 977      37373135 
+ 978 0172 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 978      66756E63 
+ 978      74696F6E 
+ 978      2D736563 
+ 978      74696F6E 
+ 979              	.LASF43:
+ 980 019a 525F5469 		.ascii	"R_Tia\000"
+ 980      6100
+ 981              	.LASF14:
+ 982 01a0 696E7431 		.ascii	"int16\000"
+ 982      3600
+ 983              	.LASF5:
+ 984 01a6 6C6F6E67 		.ascii	"long unsigned int\000"
+ 984      20756E73 
+ 984      69676E65 
+ 984      6420696E 
+ 984      7400
+ 985              	.LASF3:
+ 986 01b8 73686F72 		.ascii	"short unsigned int\000"
+ 986      7420756E 
+ 986      7369676E 
+ 986      65642069 
+ 986      6E7400
+ 987              	.LASF32:
+ 988 01cb 466C6167 		.ascii	"Flag_Hundred\000"
+ 988      5F48756E 
+ 988      64726564 
+ 988      00
+ 989              	.LASF36:
+ 990 01d8 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 990      52784275 
+ 990      66666572 
+ 990      00
+ 991              	.LASF16:
+ 992 01e5 646F7562 		.ascii	"double\000"
+ 992      6C6500
+ 993              	.LASF24:
+ 994 01ec 4E65675F 		.ascii	"Neg_Pot\000"
+ 994      506F7400 
+ 995              	.LASF12:
+ 996 01f4 75696E74 		.ascii	"uint16\000"
+ 996      313600
+ 997              	.LASF13:
+ 998 01fb 75696E74 		.ascii	"uint32\000"
+ 998      333200
+ 999              	.LASF8:
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\ccmUdTao.s 			page 21
+
+
+ 1000 0202 756E7369 		.ascii	"unsigned int\000"
+ 1000      676E6564 
+ 1000      20696E74 
+ 1000      00
+ 1001              	.LASF39:
+ 1002 020f 50696E5F 		.ascii	"Pin_LED_Write\000"
+ 1002      4C45445F 
+ 1002      57726974 
+ 1002      6500
+ 1003              	.LASF7:
+ 1004 021d 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1004      206C6F6E 
+ 1004      6720756E 
+ 1004      7369676E 
+ 1004      65642069 
+ 1005              	.LASF35:
+ 1006 0234 466C6167 		.ascii	"Flag_Two_Period\000"
+ 1006      5F54776F 
+ 1006      5F506572 
+ 1006      696F6400 
+ 1007              	.LASF34:
+ 1008 0244 466C6167 		.ascii	"Flag_One_Period\000"
+ 1008      5F4F6E65 
+ 1008      5F506572 
+ 1008      696F6400 
+ 1009              	.LASF30:
+ 1010 0254 466C6167 		.ascii	"Flag_DataCrono\000"
+ 1010      5F446174 
+ 1010      6143726F 
+ 1010      6E6F00
+ 1011              	.LASF20:
+ 1012 0263 52656365 		.ascii	"Received_Ar\000"
+ 1012      69766564 
+ 1012      5F417200 
+ 1013              	.LASF18:
+ 1014 026f 6C6F6E67 		.ascii	"long double\000"
+ 1014      20646F75 
+ 1014      626C6500 
+ 1015              	.LASF44:
+ 1016 027b 525F5449 		.ascii	"R_TIA_value\000"
+ 1016      415F7661 
+ 1016      6C756500 
+ 1017              	.LASF19:
+ 1018 0287 73697A65 		.ascii	"sizetype\000"
+ 1018      74797065 
+ 1018      00
+ 1019              	.LASF6:
+ 1020 0290 6C6F6E67 		.ascii	"long long int\000"
+ 1020      206C6F6E 
+ 1020      6720696E 
+ 1020      7400
+ 1021              	.LASF23:
+ 1022 029e 53746F70 		.ascii	"Stop\000"
+ 1022      00
+ 1023              	.LASF17:
+ 1024 02a3 63686172 		.ascii	"char\000"
+ 1024      00
+ARM GAS  C:\Users\MARCOD~1\AppData\Local\Temp\ccmUdTao.s 			page 22
+
+
+ 1025              	.LASF25:
+ 1026 02a8 506F735F 		.ascii	"Pos_Pot\000"
+ 1026      506F7400 
+ 1027              	.LASF2:
+ 1028 02b0 73686F72 		.ascii	"short int\000"
+ 1028      7420696E 
+ 1028      7400
+ 1029              	.LASF11:
+ 1030 02ba 75696E74 		.ascii	"uint8\000"
+ 1030      3800
+ 1031              	.LASF4:
+ 1032 02c0 6C6F6E67 		.ascii	"long int\000"
+ 1032      20696E74 
+ 1032      00
+ 1033              	.LASF27:
+ 1034 02c9 506F745F 		.ascii	"Pot_Range\000"
+ 1034      52616E67 
+ 1034      6500
+ 1035              	.LASF0:
+ 1036 02d3 7369676E 		.ascii	"signed char\000"
+ 1036      65642063 
+ 1036      68617200 
+ 1037              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
