@@ -280,7 +280,7 @@ int main(void)
             d2 = d1 + (Pot_Range+1);
             
             for(k=1; k < Pot_Range+1; k++){
-                I_Ox = (BufferDataSend[k]+BufferDataSend[k+d1])*(1000000/(R_TIA*2));
+                I_Ox = (BufferDataSend[k]+BufferDataSend[k+d1])*(1000000/(R_set*2));
                 Offset = b_coeff*I_Ox+a_coeff;
                 I_Ox = I_Ox - Offset;
                 max_Ox = Max_Function(I_Ox);
@@ -290,7 +290,7 @@ int main(void)
             }
             
             for(j=0; j < Pot_Range-1; j++){
-                I_Red = (BufferDataSend[j+(Pot_Range+1)]+BufferDataSend[j+d2])*(1000000/(R_TIA*2));
+                I_Red = (BufferDataSend[j+(Pot_Range+1)]+BufferDataSend[j+d2])*(1000000/(R_set*2));
                 Offset = b_coeff*I_Red+a_coeff;
                 I_Red = I_Red - Offset;
                 min_Red = Min_Function(I_Red);
